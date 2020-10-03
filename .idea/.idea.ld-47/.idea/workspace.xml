@@ -20,7 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a1f72ec-6286-46ed-9a3e-6adbad6e14e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Blur.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Blur.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +47,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CarMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/CameraRotation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" />
       </list>
     </option>
   </component>
@@ -88,7 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601722294085</updated>
       <workItem from="1601722310942" duration="1034000" />
-      <workItem from="1601752185007" duration="2451000" />
+      <workItem from="1601752185007" duration="4374000" />
     </task>
     <servers />
   </component>
@@ -117,5 +122,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601752588058" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1601761822900">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601761822900" />
   </component>
 </project>
