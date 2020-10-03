@@ -820,48 +820,6 @@
           </e>
           <e p="readme.txt" t="Include" />
         </e>
-        <e p="GaussianBlur_URP" t="Include">
-          <e p="Common" t="Include">
-            <e p="FPSDisplay.cs" t="Include" />
-            <e p="Images" t="Include">
-              <e p="aboutImages.txt" t="Include" />
-            </e>
-            <e p="info.txt" t="Include" />
-            <e p="Scripts" t="Include">
-              <e p="AddTorqueOnStart.cs" t="Include" />
-              <e p="AlwaysFace.cs" t="Include" />
-              <e p="createRenderTexture.cs" t="Include" />
-              <e p="Rotate.cs" t="Include" />
-            </e>
-            <e p="Standard Assets" t="Include">
-              <e p="Vehicles" t="Include">
-                <e p="Car" t="Include">
-                  <e p="CarGuidelines.txt" t="Include" />
-                </e>
-              </e>
-            </e>
-          </e>
-          <e p="Demo_3DModel" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="DemoSliderControl_1.cs" t="Include" />
-            </e>
-          </e>
-          <e p="Demo_AdvancedUI_1.0" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="BlurAnimControl.cs" t="Include" />
-            </e>
-          </e>
-          <e p="Demo_Basic" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="DemoSliderControl_0.cs" t="Include" />
-            </e>
-          </e>
-          <e p="Shader" t="Include">
-            <e p="BlurScale.hlsl" t="Include" />
-            <e p="GaussianBlur.hlsl" t="Include" />
-            <e p="GaussianBlur_UIEffect.hlsl" t="Include" />
-          </e>
-        </e>
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">

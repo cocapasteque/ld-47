@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a1f72ec-6286-46ed-9a3e-6adbad6e14e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP-HighQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP-HighQuality.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +43,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CarMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/CameraRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" />
       </list>
     </option>
   </component>
@@ -89,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601722294085</updated>
       <workItem from="1601722310942" duration="1034000" />
-      <workItem from="1601752185007" duration="1776000" />
+      <workItem from="1601752185007" duration="2451000" />
     </task>
     <servers />
   </component>

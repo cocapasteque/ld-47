@@ -13,6 +13,8 @@ public class CarSpawner : MonoBehaviour
     public List<GameObject> CarPrefabs;
     public Transform CarParent;
 
+    public Action CarSpawned;
+    
     public Dictionary<int, List<GameObject>> CarsPerLane;
 
     private List<float> laneRadii;
@@ -65,6 +67,8 @@ public class CarSpawner : MonoBehaviour
                 Destroy(car);
             }
         }
+
+        CarSpawned?.Invoke();
     }
 
     private Tuple<int, Vector3, float> FindSpawnPos(float dist)
