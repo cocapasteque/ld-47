@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minDistance: 1.75
+  ChangeLaneCooldown: {x: 10, y: 20}
+  Angle: 0
 --- !u!114 &5622891357637674775
 MonoBehaviour:
   m_ObjectHideFlags: 0
