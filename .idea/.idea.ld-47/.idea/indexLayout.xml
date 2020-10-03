@@ -25,6 +25,7 @@
       <Path>Logs</Path>
       <Path>Temp</Path>
       <Path>obj</Path>
+      <Path>refpictures</Path>
     </explicitExcludes>
   </component>
 </project>

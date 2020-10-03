@@ -21,7 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2a1f72ec-6286-46ed-9a3e-6adbad6e14e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car_Black.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Car_Black.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car_Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Car_Blue.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car_Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Car_Green.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car_Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Car_Orange.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car_Purple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Car_Purple.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car_Red.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Car_Red.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car_White.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Car_White.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +47,7 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/Singleton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/AudioManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CarMovement.cs" />
       </list>
     </option>
   </component>
@@ -51,6 +60,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -82,6 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601722294085</updated>
       <workItem from="1601722310942" duration="1034000" />
+      <workItem from="1601752185007" duration="402000" />
     </task>
     <servers />
   </component>
@@ -100,8 +111,15 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="461" y="170" key="SettingsEditor" timestamp="1601752588058">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601752588058" />
   </component>
 </project>
