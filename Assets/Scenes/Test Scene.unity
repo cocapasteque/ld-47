@@ -3792,6 +3792,7 @@ MonoBehaviour:
   - {fileID: 6837718460691373599, guid: 93919742ec955034d9370b95d52beaf9, type: 3}
   - {fileID: 3751979992257826253, guid: 31c472fbdc875254782b72a589c1e574, type: 3}
   - {fileID: 8307674177035387499, guid: 36db9b850538c0b4ca7ef1654db2a60d, type: 3}
+  - {fileID: 6237617848529375117, guid: a961568fb91c4b1419ebb9f235b3282c, type: 3}
   CarParent: {fileID: 120687470}
 --- !u!4 &120687470
 Transform:
