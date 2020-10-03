@@ -90,7 +90,7 @@ public class CarSpawner : MonoBehaviour
         for (int i = 0; i < 10; i++)
         {
             angle = UnityEngine.Random.Range(0f, 360f);
-            pos = new Vector3(radius * Mathf.Sin(angle), 0, radius * Mathf.Cos(angle));
+            pos = GetPosFromAngle(radius, angle);
             foreach(var car in CarsPerLane[lane])
             {
                 if (Vector3.Distance(pos, car.transform.position) < Mathf.Max(dist, car.GetComponent<NpcCarControls>().minDistance))
@@ -139,5 +139,35 @@ public class CarSpawner : MonoBehaviour
         {
             return laneRadii[lane];
         }
+    }
+
+    public bool CheckFreeSpotInLane(int lane, float angle, float dist)
+    {
+        bool canSwitch = true;
+        Vector3 pos = GetPosFromAngle(laneRadii[lane], angle);
+        foreach (var car in CarsPerLane[lane])
+        {
+            var npc = car.GetComponent<NpcCarControls>();
+            Vector3 carPos = GetPosFromAngle(laneRadii[lane], npc.Angle);
+            if (Vector3.Distance(pos, carPos) < Mathf.Max(dist, npc.minDistance))
+            {
+                canSwitch = false;
+                break;
+            }
+        }
+        Debug.Log("can switch = " + canSwitch);
+        return canSwitch;
+    }  
+    
+    public void SwitchLane(GameObject car, int oldLane, int newLane)
+    {
+        Debug.Log("Switch");
+        CarsPerLane[oldLane].Remove(car);
+        CarsPerLane[newLane].Add(car);
+    }
+
+    private Vector3 GetPosFromAngle(float radius, float angle)
+    {
+        return new Vector3(radius * Mathf.Sin(angle), 0 , radius * Mathf.Cos(angle));
     }
 }
