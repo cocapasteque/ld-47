@@ -30,7 +30,7 @@ public class Exit : MonoBehaviour
 
         IEnumerator Turning()
         {         
-            while(Quaternion.Angle(player.transform.rotation, FinalDirection.rotation) > 1f)
+            while(Quaternion.Angle(player.transform.rotation, FinalDirection.rotation) > 3f)
             {
                 RotationObject.Rotate(Vector3.up, TurningSpeed * Time.deltaTime);
                 yield return null;
@@ -52,6 +52,7 @@ public class Exit : MonoBehaviour
                 player.transform.Translate(Vector3.forward * Mathf.Lerp(LeaveStartSpeed * Time.deltaTime, 0f, t));
                 Cg.alpha = t;          
             }
+            CarSpawner.Instance.NextLevel();
         }
     }
 }

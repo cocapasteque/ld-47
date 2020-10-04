@@ -21,6 +21,10 @@ public class CarSpawner : MonoBehaviour
     private List<float> laneProbabilities;
 
     public int CurrentLevel = 0;
+    public CanvasGroup Cg;
+    public float FadeDuration;
+
+    public List<GameObject> Exits;
 
     private static CarSpawner _instance;
 
@@ -50,6 +54,12 @@ public class CarSpawner : MonoBehaviour
         Vector2 laneChangeCooldown = GetCurrentLaneChangeCooldown();
         int cars = GetCurrentNumberOfCars();
         float speed = GetCurrentSpeed();
+        foreach (var exit in Exits)
+        {
+            exit.SetActive(false);
+        }
+        var rnd = UnityEngine.Random.Range(0, Exits.Count);
+        Exits[rnd].SetActive(true);
         CarsPerLane = new Dictionary<int, List<GameObject>>();
         for(int i = 0; i < Lanes; i++)
         {
@@ -199,5 +209,31 @@ public class CarSpawner : MonoBehaviour
     private Vector3 GetPosFromAngle(float radius, float angle)
     {
         return new Vector3(radius * Mathf.Sin(angle), 0 , radius * Mathf.Cos(angle));
+    }
+
+    public void NextLevel()
+    {
+        CurrentLevel++;
+        foreach(Transform car in CarParent)
+        {
+            Destroy(car.gameObject);         
+        }
+        SpawnCars();
+        var player = FindObjectOfType<CircleControls>();
+        player.Init();
+
+        StartCoroutine(FadeIn());
+
+        IEnumerator FadeIn()
+        {
+            yield return new WaitForSeconds(0.2f);
+            float startTime = Time.time;
+            while (Time.time - startTime < FadeDuration)
+            {
+                yield return null;
+                Cg.alpha = 1f - (Time.time - startTime) / FadeDuration;
+            }
+            Cg.alpha = 0f;
+        }
     }
 }

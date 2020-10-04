@@ -49,9 +49,13 @@ public class CircleControls : MonoBehaviour
         Init();
     }
 
-    private void Init()
+    public void Init()
     {
         angle = 0;
+        GetComponent<Collider>().enabled = true;
+        exited = false;
+        var transposer = vcam.GetCinemachineComponent<CinemachineTransposer>();
+        transposer.m_FollowOffset = new Vector3(ExitTurningX.Evaluate(0), ExitTurningY.Evaluate(0), ExitTurningZ.Evaluate(0));
         var levelStats = CarSpawner.Instance.levelStats;
         var currentLevel = CarSpawner.Instance.CurrentLevel;
         maxSpeed = levelStats.FirstLevelPlayerMaxSpeed * Mathf.Pow(levelStats.SpeedIncreaseFactor, currentLevel);
@@ -188,6 +192,7 @@ public class CircleControls : MonoBehaviour
     }
     private void Exit()
     {
+        GetComponent<Collider>().enabled = false;
         exited = true;
         var transposer = vcam.GetCinemachineComponent<CinemachineTransposer>();
         StartCoroutine(Turning());
