@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6564764855894014139}
   - component: {fileID: 1782851293865245082}
   - component: {fileID: 4074664120165651997}
+  - component: {fileID: 1280634212542981762}
   m_Layer: 0
   m_Name: Bus_Green
   m_TagString: Untagged
@@ -63,6 +64,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rollSpeed: {x: 10, y: 20}
   pitchSpeed: {x: 10, y: 20}
+--- !u!65 &1280634212542981762
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930672823941037861}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9776736, y: 1.0077866, z: 2.964723}
+  m_Center: {x: -0.0055816025, y: 0.5006556, z: 0.2734986}
 --- !u!1001 &6755072921112542418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78,7 +92,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9188a16b3fd8dbf46806803e7ec4ff07,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9188a16b3fd8dbf46806803e7ec4ff07,
         type: 3}

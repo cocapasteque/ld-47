@@ -26,9 +26,16 @@ public class CircleControls : MonoBehaviour
 
     private void Start()
     {
+        Init();
+    }
+
+    private void Init()
+    {
         angle = 0;
         speed = SpeedBounds[0];
         radius = RadiusBounds[0];
+        transform.position = new Vector3(radius * Mathf.Sin(angle), 0f, radius * Mathf.Cos(angle));
+        transform.rotation = Quaternion.LookRotation(Vector3.Cross(transform.position, Vector3.up));
     }
 
     void Update()
@@ -83,5 +90,17 @@ public class CircleControls : MonoBehaviour
         }
         transform.position = new Vector3(radius * Mathf.Sin(angle), 0f, radius * Mathf.Cos(angle));
         transform.rotation = rot;     
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Exit")
+        {
+            Debug.Log("Exit");
+        }
+        else
+        {
+            Debug.Log("HIT");
+        }
     }
 }

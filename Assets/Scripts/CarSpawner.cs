@@ -60,7 +60,7 @@ public class CarSpawner : MonoBehaviour
                 car.transform.position = tuple.Item2;
                 car.transform.rotation = Quaternion.LookRotation(Vector3.Cross(tuple.Item2, Vector3.up));
                 CarsPerLane[tuple.Item1].Add(car);
-                car.GetComponent<NpcCarControls>().Init(5, tuple.Item1, tuple.Item3);
+                car.GetComponent<NpcCarControls>().Init(Speed, tuple.Item1, tuple.Item3);
             }
             else
             {
@@ -159,13 +159,11 @@ public class CarSpawner : MonoBehaviour
                 break;
             }
         }
-        Debug.Log("can switch = " + canSwitch);
         return canSwitch;
     }  
     
     public void SwitchLane(GameObject car, int oldLane, int newLane)
     {
-        Debug.Log("Switch");
         CarsPerLane[oldLane].Remove(car);
         CarsPerLane[newLane].Add(car);
     }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8484833933624609363}
   - component: {fileID: 3920208200431373170}
   - component: {fileID: -7613748358273358603}
+  - component: {fileID: 2589863157076562559}
   m_Layer: 0
   m_Name: Car_Red
   m_TagString: Untagged
@@ -63,6 +64,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rollSpeed: {x: 10, y: 20}
   pitchSpeed: {x: 10, y: 20}
+--- !u!65 &2589863157076562559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3751979992257826253}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9499064, y: 1.0244473, z: 2.048389}
+  m_Center: {x: -0.063893706, y: 0.38680774, z: 0.070794374}
 --- !u!1001 &1175124914908602760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78,7 +92,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0796e187d6568aa4cb16201e0825e14c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0796e187d6568aa4cb16201e0825e14c,
         type: 3}

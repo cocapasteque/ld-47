@@ -21,15 +21,6 @@ public class NpcCarControls : MonoBehaviour
         Angle -= speed * Time.deltaTime / radius;
         transform.position = new Vector3(radius * Mathf.Sin(Angle), 0f, radius * Mathf.Cos(Angle));
         transform.rotation = Quaternion.LookRotation(Vector3.Cross(transform.position, Vector3.up));
-
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            ChangeLane(true);
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            ChangeLane(false);
-        }
     }
 
     public void Init(float s, int l, float a)

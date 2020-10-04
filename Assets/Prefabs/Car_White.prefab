@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5956917704833282366}
   - component: {fileID: 5616088106394434479}
   - component: {fileID: 1147941282286501179}
+  - component: {fileID: 6174469027060890086}
   m_Layer: 0
   m_Name: Car_White
   m_TagString: Untagged
@@ -63,6 +64,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rollSpeed: {x: 10, y: 20}
   pitchSpeed: {x: 10, y: 20}
+--- !u!65 &6174469027060890086
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8307674177035387499}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9499064, y: 1.0244473, z: 2.048389}
+  m_Center: {x: -0.063893706, y: 0.38680774, z: 0.070794374}
 --- !u!1001 &5710379713890757053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78,7 +92,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 945c801dbfd0ebf4ab1b31f970422414,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 945c801dbfd0ebf4ab1b31f970422414,
         type: 3}

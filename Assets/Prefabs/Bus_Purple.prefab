@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4393739373622897444}
   - component: {fileID: 3419331115869462439}
   - component: {fileID: 7190950704684457287}
+  - component: {fileID: 5900598692103737584}
   m_Layer: 0
   m_Name: Bus_Purple
   m_TagString: Untagged
@@ -63,6 +64,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rollSpeed: {x: 10, y: 20}
   pitchSpeed: {x: 10, y: 20}
+--- !u!65 &5900598692103737584
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056443375151416804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9776736, y: 1.0077866, z: 2.964723}
+  m_Center: {x: -0.0055816025, y: 0.5006556, z: 0.2734986}
 --- !u!1001 &898081290560430918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78,7 +92,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ad8c5091413c01d48a2d615581204b6d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad8c5091413c01d48a2d615581204b6d,
         type: 3}
