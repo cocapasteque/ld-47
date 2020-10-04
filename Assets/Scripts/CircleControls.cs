@@ -61,6 +61,10 @@ public class CircleControls : MonoBehaviour
 
     void Update()
     {
+        if (exited)
+        {
+            return;
+        }
         angle -= speed * Time.deltaTime / radius;
         baseRot = Quaternion.LookRotation(Vector3.Cross(transform.position, Vector3.up));
         if (Input.GetKey(KeyCode.UpArrow))
@@ -133,7 +137,7 @@ public class CircleControls : MonoBehaviour
         {
             if (!exited)
             {
-                Debug.Log("Exit");
+                other.GetComponent<Exit>().StartExiting(gameObject);
                 Exit();
             }
         }
@@ -196,4 +200,3 @@ public class CircleControls : MonoBehaviour
         }
     }
 }
-
