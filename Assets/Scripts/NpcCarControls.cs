@@ -13,7 +13,15 @@ public class NpcCarControls : MonoBehaviour
     private int lane;
     private float speed;
     private float radius;
-    
+
+    public AudioClip[] honks;
+    public AudioSource source;
+
+    void Start()
+    {
+        source = GetComponent<AudioSource>();
+        source.pitch = Random.Range(1, 2);
+    }
     
     // Update is called once per frame
     void Update()
@@ -47,9 +55,15 @@ public class NpcCarControls : MonoBehaviour
             lane = newLane;
             CarSpawner.Instance.SwitchLane(gameObject, oldLane, newLane);       
             DOTween.To(() => radius, x => radius = x, CarSpawner.Instance.GetRadius(newLane), 1.5f);
+            Honk();
         }
     }
 
+    private void Honk()
+    {
+        source.PlayOneShot(honks[Random.Range(0, honks.Length)]);
+    }
+    
     private IEnumerator StartChangeLaneCooldown()
     {
         while (true)
