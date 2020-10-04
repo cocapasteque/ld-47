@@ -58,8 +58,11 @@ public class CarSpawner : MonoBehaviour
         {
             exit.SetActive(false);
         }
-        var rnd = UnityEngine.Random.Range(0, Exits.Count);
-        Exits[rnd].SetActive(true);
+        if (Exits.Count > 0)
+        {
+            var rnd = UnityEngine.Random.Range(0, Exits.Count);
+            Exits[rnd].SetActive(true);
+        }
         CarsPerLane = new Dictionary<int, List<GameObject>>();
         for(int i = 0; i < Lanes; i++)
         {
