@@ -30,7 +30,7 @@ namespace MainMenu
 
         public IEnumerator OnCarSpawned()
         {
-            yield return Fade(false);
+            StartCoroutine(Fade(false));
             yield return null;
             _cars = new Transform[3];
 
@@ -87,7 +87,12 @@ namespace MainMenu
 
         public Transform GetCar()
         {
-            return _spawner.CarParent.GetChild(Random.Range(0, _spawner.CarParent.childCount));
+            var car = _spawner.CarParent.GetChild(Random.Range(0, _spawner.CarParent.childCount));
+            if (Vector3.Distance(car.position, Camera.main.transform.position) > 20)
+            {
+                return GetCar();
+            }
+            return car;
         }
 
         public void StartGame()
