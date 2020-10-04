@@ -19,7 +19,7 @@ public class CircleControls : MonoBehaviour
 
     private float angle;
     private float radius;
-    private float speed;
+    public float speed;
 
     private float turningLeftTime, turningRightTime;
     private bool turningLeft, turningRight;

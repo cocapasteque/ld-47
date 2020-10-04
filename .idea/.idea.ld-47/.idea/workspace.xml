@@ -20,12 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a1f72ec-6286-46ed-9a3e-6adbad6e14e3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Blur.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Blur.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CircleControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CircleControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SimpleCameraController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SimpleCameraController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +42,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraSpeedEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/CameraRotation.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -49,6 +55,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/CameraRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCameraControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFollower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CircleControls.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraSpeedEffect.cs" />
       </list>
     </option>
   </component>
@@ -93,7 +103,8 @@
       <option name="presentableId" value="Default" />
       <updated>1601722294085</updated>
       <workItem from="1601722310942" duration="1034000" />
-      <workItem from="1601752185007" duration="4374000" />
+      <workItem from="1601752185007" duration="4490000" />
+      <workItem from="1601800432110" duration="2205000" />
     </task>
     <servers />
   </component>
@@ -122,6 +133,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601752588058" />
+    <state x="621" y="102" width="678" height="846" key="find.popup" timestamp="1601802504645">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="621" y="102" width="678" height="846" key="find.popup/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601802504645" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1601761822900">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

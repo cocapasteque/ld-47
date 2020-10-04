@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c966b436bf4c94184a1b8edd406c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RadiusBounds: {x: 3, y: 10}
-  SpeedBounds: {x: 6, y: 40}
+  RadiusBounds: {x: 6, y: 15}
+  SpeedBounds: {x: 0, y: 15}
   AccelerationCurve:
     serializedVersion: 2
     m_Curve:

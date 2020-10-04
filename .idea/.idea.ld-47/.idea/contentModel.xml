@@ -837,6 +837,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="CameraSpeedEffect.cs" t="Include" />
           <e p="CarMovement.cs" t="Include" />
           <e p="CarSpawner.cs" t="Include" />
           <e p="CircleControls.cs" t="Include" />
@@ -845,7 +846,6 @@
             <e p="MainMenuButtons.cs" t="Include" />
           </e>
           <e p="NpcCarControls.cs" t="Include" />
-          <e p="SimpleCameraController.cs" t="Include" />
           <e p="Utils" t="Include">
             <e p="AudioManager.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
