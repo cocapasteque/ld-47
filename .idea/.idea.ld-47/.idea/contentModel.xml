@@ -841,6 +841,8 @@
           <e p="CarMovement.cs" t="Include" />
           <e p="CarSpawner.cs" t="Include" />
           <e p="CircleControls.cs" t="Include" />
+          <e p="Exit.cs" t="Include" />
+          <e p="LevelStats.cs" t="Include" />
           <e p="MainMenu" t="Include">
             <e p="CameraRotation.cs" t="Include" />
             <e p="MainMenuButtons.cs" t="Include" />

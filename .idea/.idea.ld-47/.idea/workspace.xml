@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a1f72ec-6286-46ed-9a3e-6adbad6e14e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Untitled-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Untitled-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ad_truck.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ad_truck.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ad_stefan.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ad_stefan.psd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NpcCarControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NpcCarControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,7 @@
       <updated>1601722294085</updated>
       <workItem from="1601722310942" duration="1034000" />
       <workItem from="1601752185007" duration="4490000" />
-      <workItem from="1601800432110" duration="14752000" />
+      <workItem from="1601800432110" duration="15347000" />
     </task>
     <servers />
   </component>
