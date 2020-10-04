@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -44,9 +45,9 @@ namespace MainMenu
             {
                 var button = Instantiate(buttonPrefab, _cars[i]);
                 button.transform.localPosition = Vector3.up * 2;
-                var text = button.GetComponentInChildren<Text>();
+                var text = button.GetComponentInChildren<TMP_Text>();
                 text.text = _buttonTexts[i];
-                button.GetComponentInChildren<Canvas>().worldCamera = Camera.main;
+                
                 _buttons[i] = button;
             }
 
