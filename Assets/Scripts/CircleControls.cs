@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,8 +24,14 @@ public class CircleControls : MonoBehaviour
     private float radius;
     public float speed;
 
+    private float speedRatio;
+
     private float turningLeftTime, turningRightTime;
     private bool turningLeft, turningRight;
+
+    private Quaternion baseRot;
+    private Quaternion turningRot;
+    private float lastTurnTime = 0f;
 
     private void Start()
     {
@@ -38,12 +45,13 @@ public class CircleControls : MonoBehaviour
         radius = RadiusBounds[0];
         transform.position = new Vector3(radius * Mathf.Sin(angle), 0f, radius * Mathf.Cos(angle));
         transform.rotation = Quaternion.LookRotation(Vector3.Cross(transform.position, Vector3.up));
+        turningRot = Quaternion.identity;
     }
 
     void Update()
     {
         angle -= speed * Time.deltaTime / radius;
-        Quaternion rot = Quaternion.LookRotation(Vector3.Cross(transform.position, Vector3.up));
+        baseRot = Quaternion.LookRotation(Vector3.Cross(transform.position, Vector3.up));     
         if (Input.GetKey(KeyCode.UpArrow))
         {
             var speedGain = AccelerationCurve.Evaluate(Mathf.InverseLerp(SpeedBounds[0], SpeedBounds[1], speed)) * Acceleration * Time.deltaTime;
@@ -53,15 +61,16 @@ public class CircleControls : MonoBehaviour
         {
             speed = Mathf.Clamp(speed - Acceleration * Time.deltaTime, SpeedBounds[0], SpeedBounds[1]);
         }
-
+        speedRatio = speed / SpeedBounds[1];
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             if (radius > RadiusBounds[0])
             {
+                lastTurnTime = Time.time;
                 turningLeftTime += Time.deltaTime;
                 var turningModifier = TurningCurve.Evaluate(turningLeftTime / MaxTurningDuration);
-                radius = Mathf.Clamp(radius - TurningSpeed * turningModifier * Time.deltaTime, RadiusBounds[0], RadiusBounds[1]);
-                rot *= Quaternion.AngleAxis(-turningModifier * MaxTurningAngle, Vector3.up);
+                radius = Mathf.Clamp(radius - TurningSpeed * turningModifier * speedRatio * Time.deltaTime, RadiusBounds[0], RadiusBounds[1]);
+                turningRot = Quaternion.AngleAxis(-turningModifier * MaxTurningAngle * speedRatio, Vector3.up);
             }
             else
             {
@@ -76,10 +85,11 @@ public class CircleControls : MonoBehaviour
         {
             if (radius < RadiusBounds[1])
             {
+                lastTurnTime = Time.time;
                 turningRightTime += Time.deltaTime;
                 var turningModifier = TurningCurve.Evaluate(turningRightTime / MaxTurningDuration);
-                radius = Mathf.Clamp(radius + TurningSpeed * turningModifier * Time.deltaTime, RadiusBounds[0], RadiusBounds[1]);
-                rot *= Quaternion.AngleAxis(turningModifier * MaxTurningAngle, Vector3.up);
+                radius = Mathf.Clamp(radius + TurningSpeed * turningModifier * speedRatio * Time.deltaTime, RadiusBounds[0], RadiusBounds[1]);
+                turningRot = Quaternion.AngleAxis(turningModifier * MaxTurningAngle * speedRatio, Vector3.up);
             }
             else
             {
@@ -90,8 +100,12 @@ public class CircleControls : MonoBehaviour
         {
             turningRightTime = 0f;
         }
+        if (turningRightTime == 0f && turningLeftTime == 0f)
+        {
+            turningRot = Quaternion.Slerp(turningRot, Quaternion.identity, Time.time - lastTurnTime);
+        }
         transform.position = new Vector3(radius * Mathf.Sin(angle), 0f, radius * Mathf.Cos(angle));
-        transform.rotation = rot;     
+        transform.rotation = baseRot * turningRot;     
     }
 
     private void OnTriggerEnter(Collider other)
