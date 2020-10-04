@@ -837,6 +837,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="ArrowMovement.cs" t="Include" />
           <e p="CameraSpeedEffect.cs" t="Include" />
           <e p="CarMovement.cs" t="Include" />
           <e p="CarSpawner.cs" t="Include" />
