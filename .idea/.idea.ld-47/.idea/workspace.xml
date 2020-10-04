@@ -20,11 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a1f72ec-6286-46ed-9a3e-6adbad6e14e3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exit.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ArrowMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ArrowMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Untitled-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Untitled-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,9 +55,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/TextMeshButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MenuButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraSpeedEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CircleControls.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArrowMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" />
       </list>
     </option>
   </component>
@@ -104,7 +105,7 @@
       <updated>1601722294085</updated>
       <workItem from="1601722310942" duration="1034000" />
       <workItem from="1601752185007" duration="4490000" />
-      <workItem from="1601800432110" duration="13144000" />
+      <workItem from="1601800432110" duration="14752000" />
     </task>
     <servers />
   </component>
@@ -218,10 +219,10 @@
           <line>55</line>
           <properties documentPath="D:\workfolder\AT\ld-47\Assets\Scripts\MainMenu\MainMenuButtons.cs" initialLine="50">
             <startOffsets>
-              <option value="1663" />
+              <option value="1652" />
             </startOffsets>
             <endOffsets>
-              <option value="1706" />
+              <option value="1695" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

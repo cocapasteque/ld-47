@@ -18,7 +18,7 @@ namespace MainMenu
         public Transform buttonTarget;
         private GameObject[] _buttons;
         private bool _ready;
-        private string[] _buttonTexts = new[] {"Start", "Credits", "Exit"};
+        private string[] _buttonTexts = new[] {"Start", "Exit"};
         public Button.ButtonClickedEvent[] buttonActions;
         public RawImage fadeImage;
 
@@ -34,7 +34,7 @@ namespace MainMenu
             yield return null;
             _cars = new Transform[3];
 
-            for (var i = 0; i < 3; i++)
+            for (var i = 0; i < 2; i++)
             {
                 Transform car = null;
                 while (car == null || _cars.Contains(car))
@@ -45,9 +45,9 @@ namespace MainMenu
                 _cars[i] = car;
             }
 
-            _buttons = new GameObject[3];
+            _buttons = new GameObject[2];
 
-            for (var i = 0; i < 3; i++)
+            for (var i = 0; i < 2; i++)
             {
                 var button = Instantiate(buttonPrefab, _cars[i]);
                 button.transform.localPosition = Vector3.up * 2;
