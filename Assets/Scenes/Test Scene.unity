@@ -3850,8 +3850,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lanes: 7
   RadiusBounds: {x: 7.25, y: 15}
-  Speed: 5
-  Cars: 0
   CarPrefabs:
   - {fileID: 5063251880823762394, guid: 9ad5d09adad02b04c8dc90c87426de0c, type: 3}
   - {fileID: 318360677063348279, guid: 3c6722355c24cbd46ace719df932758a, type: 3}
@@ -3865,6 +3863,8 @@ MonoBehaviour:
   - {fileID: 1930672823941037861, guid: 6323e10702668184f8c2d0fb5bacedc2, type: 3}
   - {fileID: 7032652727338181774, guid: e213bc85659650b459c4669e27ee0543, type: 3}
   CarParent: {fileID: 120687470}
+  levelStats: {fileID: 11400000, guid: 050a189caede19847bd519d9f371b0ca, type: 2}
+  CurrentLevel: 0
 --- !u!4 &120687470
 Transform:
   m_ObjectHideFlags: 0
@@ -26880,7 +26880,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905329404}
-  m_LocalRotation: {x: 0.22975291, y: -0.00000001871676, z: 0.0000000043946544, w: 0.973249}
+  m_LocalRotation: {x: 0.22975291, y: -0.000000018716717, z: 0.000000004394478, w: 0.973249}
   m_LocalPosition: {x: 0, y: 5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -37283,7 +37283,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243148586}
-  m_LocalRotation: {x: 0.22975291, y: -0.00000001871676, z: 0.0000000043946544, w: 0.973249}
+  m_LocalRotation: {x: 0.22975291, y: -0.000000018716717, z: 0.000000004394478, w: 0.973249}
   m_LocalPosition: {x: 0, y: 5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -58914,6 +58914,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ExitTurningDuration
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8676759040646921074, guid: 493c27704a4d73447a268185f2770673,
+        type: 3}
+      propertyPath: BaseTurningSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1737834557, guid: 493c27704a4d73447a268185f2770673, type: 3}
       propertyPath: m_LocalRotation.x

@@ -8,8 +8,6 @@ public class CarSpawner : MonoBehaviour
 {
     public int Lanes;
     public Vector2 RadiusBounds;
-    public float Speed;
-    public int Cars;
     public List<GameObject> CarPrefabs;
     public Transform CarParent;
 
@@ -17,8 +15,12 @@ public class CarSpawner : MonoBehaviour
     
     public Dictionary<int, List<GameObject>> CarsPerLane;
 
+    public LevelStats levelStats;
+
     private List<float> laneRadii;
     private List<float> laneProbabilities;
+
+    public int CurrentLevel = 0;
 
     private static CarSpawner _instance;
 
@@ -45,12 +47,15 @@ public class CarSpawner : MonoBehaviour
 
     public void SpawnCars()
     {
+        Vector2 laneChangeCooldown = GetCurrentLaneChangeCooldown();
+        int cars = GetCurrentNumberOfCars();
+        float speed = GetCurrentSpeed();
         CarsPerLane = new Dictionary<int, List<GameObject>>();
         for(int i = 0; i < Lanes; i++)
         {
             CarsPerLane.Add(i, new List<GameObject>());
         }
-        for (int i = 0; i < Cars; i++)
+        for (int i = 0; i < cars; i++)
         {
             int prefabIndex = UnityEngine.Random.Range(0, CarPrefabs.Count);
             GameObject car = Instantiate(CarPrefabs[prefabIndex], CarParent);
@@ -60,7 +65,7 @@ public class CarSpawner : MonoBehaviour
                 car.transform.position = tuple.Item2;
                 car.transform.rotation = Quaternion.LookRotation(Vector3.Cross(tuple.Item2, Vector3.up));
                 CarsPerLane[tuple.Item1].Add(car);
-                car.GetComponent<NpcCarControls>().Init(Speed, tuple.Item1, tuple.Item3);
+                car.GetComponent<NpcCarControls>().Init(speed, tuple.Item1, tuple.Item3, laneChangeCooldown);
             }
             else
             {
@@ -70,6 +75,28 @@ public class CarSpawner : MonoBehaviour
 
         Debug.Log("Car spawned");
         CarSpawned?.Invoke();
+    }
+
+    private Vector2 GetCurrentLaneChangeCooldown()
+    {
+        var currentAnimPos = (float)CurrentLevel / levelStats.MinLaneChangeCooldownLevel;
+        var t = levelStats.LaneChangeCooldownDecrease.Evaluate(currentAnimPos);
+        Vector2 result = t * (levelStats.MinLaneChangeCooldown - levelStats.FirstLevelLaneChangeCooldown) + levelStats.FirstLevelLaneChangeCooldown;
+        return result;
+    }
+
+    private int GetCurrentNumberOfCars()
+    {
+        var currentAnimPos = (float)CurrentLevel /levelStats.MaxCarLevel;
+        var t = levelStats.CarIncrease.Evaluate(currentAnimPos);
+        int result = Mathf.FloorToInt(t * (levelStats.MaxCars - levelStats.FirstLevelCars) + levelStats.FirstLevelCars);
+        return result;
+    }
+
+    private float GetCurrentSpeed()
+    {
+        var result = levelStats.FirstLevelSpeed * Mathf.Pow(levelStats.SpeedIncreaseFactor, CurrentLevel);
+        return result;
     }
 
     private Tuple<int, Vector3, float> FindSpawnPos(float dist)

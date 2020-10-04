@@ -10,7 +10,7 @@ public class CameraSpeedEffect : MonoBehaviour
     public AnimationCurve effectCurve;
     void Update()
     {
-        var vel = Remap(player.speed, player.SpeedBounds.x, player.SpeedBounds.y, 0, 1);
+        var vel = Remap(player.speed, 0, player.maxSpeed, 0, 1);
         vCam.m_Lens.FieldOfView = effectCurve.Evaluate(vel);
     }
     
