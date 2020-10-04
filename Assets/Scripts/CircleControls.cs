@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Cinemachine;
 public class CircleControls : MonoBehaviour
 {
     public GameObject explosionPrefab;
@@ -11,8 +11,12 @@ public class CircleControls : MonoBehaviour
     public Vector2 SpeedBounds;
 
     public AnimationCurve AccelerationCurve;
-    public AnimationCurve BreakingCurve;
     public AnimationCurve TurningCurve;
+
+    public float ExitTurningDuration;
+    public AnimationCurve ExitTurningX;
+    public AnimationCurve ExitTurningY;
+    public AnimationCurve ExitTurningZ;
 
     public float Acceleration;
     public float TurningSpeed;
@@ -23,6 +27,7 @@ public class CircleControls : MonoBehaviour
     private float angle;
     private float radius;
     public float speed;
+    public CinemachineVirtualCamera vcam;
 
     private float speedRatio;
 
@@ -32,6 +37,8 @@ public class CircleControls : MonoBehaviour
     private Quaternion baseRot;
     private Quaternion turningRot;
     private float lastTurnTime = 0f;
+
+    private bool exited = false;
 
     private void Start()
     {
@@ -112,7 +119,11 @@ public class CircleControls : MonoBehaviour
     {
         if (other.tag == "Exit")
         {
-            Debug.Log("Exit");
+            if (!exited)
+            {
+                Debug.Log("Exit");
+                Exit();
+            }
         }
         else
         {
@@ -124,6 +135,25 @@ public class CircleControls : MonoBehaviour
             rb.isKinematic = false;
             rb.AddExplosionForce(300, rb.transform.position - Vector3.up, 2, 2);
             Debug.Log("HIT");
+        }
+    }
+
+    private void Exit()
+    {
+        exited = true;
+        var transposer = vcam.GetCinemachineComponent<CinemachineTransposer>();
+        StartCoroutine(Turning());
+
+        IEnumerator Turning()
+        {
+            float startTime = Time.time;
+            float t = 0;
+            while (Time.time - startTime <= ExitTurningDuration)
+            {
+                t = (Time.time - startTime) / ExitTurningDuration;
+                transposer.m_FollowOffset = new Vector3(ExitTurningX.Evaluate(t), ExitTurningY.Evaluate(t), ExitTurningZ.Evaluate(t));
+                yield return null;
+            }
         }
     }
 }
