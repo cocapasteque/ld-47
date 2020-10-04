@@ -46,7 +46,12 @@ public class CircleControls : MonoBehaviour
     private int _currentPlayerState = 0;
     private bool exited = false;
 
-    private float _hitCooldown = 1;
+    [Tooltip("0 - 1st value:\tnegative\n1st - 2nd value:\tneutral\n2nd value - 1:\tpositive")]
+    public Vector2 HonkEffectProbabilities;
+    public float HonkCooldown = 1f;
+    private float currentHonkCooldown = 10f;
+
+    public float HitCooldown = 0.3f;
     private float _currentCooldown = 1;
 
     [ColorUsage(false, true)] public Color _blinkColor;
@@ -144,7 +149,11 @@ public class CircleControls : MonoBehaviour
             turningRightTime = 0f;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space)) Honk();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (currentHonkCooldown > HonkCooldown)
+                Honk();
+        }
 
         if (turningRightTime == 0f && turningLeftTime == 0f)
         {
@@ -154,22 +163,39 @@ public class CircleControls : MonoBehaviour
         transform.position = new Vector3(radius * Mathf.Sin(angle), 0f, radius * Mathf.Cos(angle));
         transform.rotation = baseRot * turningRot;
 
+        currentHonkCooldown += Time.deltaTime;
         _currentCooldown += Time.deltaTime;
     }
 
     private void Honk()
     {
+        currentHonkCooldown = 0;
         source.PlayOneShot(honkClip);
         // Get Npc around the player
         var hits = Physics.OverlapSphere(transform.position, 2).ToList();
         hits = hits.Distinct(new ColliderComparer()).ToList();
         foreach (var hit in hits)
-        {
+        {        
             var npc = hit.GetComponent<NpcCarControls>();
             if (npc == null) continue;
             var diff = npc.transform.position - transform.position;
             var dot = Vector3.Dot(transform.right, diff);
-            npc.ChangeLane(dot < 0);
+            var rnd = Random.Range(0f, 1f);
+            //Change to your lane
+            if (rnd < HonkEffectProbabilities[0])
+            {
+                npc.ChangeLane(dot > 0);
+                Debug.Log("negative");
+            }
+            //Change to other lane
+            else if (rnd > HonkEffectProbabilities[1])
+            {
+                npc.ChangeLane(dot < 0);
+                Debug.Log("positive");
+            }
+            else
+                Debug.Log("neutral");
+
         }
 
     }
@@ -185,9 +211,7 @@ public class CircleControls : MonoBehaviour
             }
         }
         else
-        {
-            if (_currentCooldown <= _hitCooldown) return;
-            _currentCooldown = 0;
+        {                   
             var explosion = Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
             Destroy(explosion, 5);
             other.GetComponent<NpcCarControls>().enabled = false;
@@ -195,7 +219,8 @@ public class CircleControls : MonoBehaviour
             var rb = other.GetComponent<Rigidbody>();
             rb.isKinematic = false;
             rb.AddExplosionForce(500, rb.transform.position - Vector3.up, 2, 2);
-
+            if (_currentCooldown <= HitCooldown) return;
+            _currentCooldown = 0;
             playerStates[_currentPlayerState].SetActive(false);
             if (++_currentPlayerState > playerStates.Length - 1)
             {
@@ -221,16 +246,16 @@ public class CircleControls : MonoBehaviour
 
         var baseColor = matPropBlock.GetColor("_EmissionColor");
 
-        while (_currentCooldown <= _hitCooldown)
+        while (_currentCooldown <= HitCooldown)
         {
             matPropBlock.SetColor("_EmissionColor", _blinkColor);
             renderer.SetPropertyBlock(matPropBlock);
             Debug.Log(_blinkColor);
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.2f * HitCooldown);
             matPropBlock.SetColor("_EmissionColor", baseColor);
             renderer.SetPropertyBlock(matPropBlock);
             Debug.Log(baseColor);
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.2f * HitCooldown);
         }
 
         matPropBlock.SetColor("_EmissionColor", baseColor);
