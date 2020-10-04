@@ -23,8 +23,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material.003.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Material.003.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSpeedEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraSpeedEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/TextMeshButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/TextMeshButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP-HighQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP-HighQuality.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +46,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraSpeedEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/TextMeshButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/InputFieldEventCheck.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/CameraRotation.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -48,13 +57,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CarMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/CameraRotation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCameraControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFollower.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraSpeedEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CircleControls.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/TextMeshButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MenuButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraSpeedEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" />
       </list>
     </option>
   </component>
@@ -64,6 +74,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -80,10 +92,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5956">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="5956" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -100,7 +112,7 @@
       <updated>1601722294085</updated>
       <workItem from="1601722310942" duration="1034000" />
       <workItem from="1601752185007" duration="4490000" />
-      <workItem from="1601800432110" duration="5499000" />
+      <workItem from="1601800432110" duration="8875000" />
     </task>
     <servers />
   </component>
@@ -125,6 +137,74 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="449" height="464" key="DebuggerActiveHint" timestamp="1601814746085">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="449" height="464" key="DebuggerActiveHint/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814746085" />
+    <state width="1877" height="379" key="GridCell.Tab.0.bottom" timestamp="1601814924996">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.0.bottom/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924996" />
+    <state width="1877" height="379" key="GridCell.Tab.0.center" timestamp="1601814924995">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.0.center/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924995" />
+    <state width="1877" height="379" key="GridCell.Tab.0.left" timestamp="1601814924995">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.0.left/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924995" />
+    <state width="1877" height="379" key="GridCell.Tab.0.right" timestamp="1601814924996">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.0.right/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924996" />
+    <state width="1877" height="379" key="GridCell.Tab.1.bottom" timestamp="1601814924996">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.1.bottom/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924996" />
+    <state width="1877" height="379" key="GridCell.Tab.1.center" timestamp="1601814924996">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.1.center/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924996" />
+    <state width="1877" height="379" key="GridCell.Tab.1.left" timestamp="1601814924996">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.1.left/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924996" />
+    <state width="1877" height="379" key="GridCell.Tab.1.right" timestamp="1601814924996">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.1.right/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924996" />
+    <state width="1877" height="379" key="GridCell.Tab.2.bottom" timestamp="1601814924996">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.2.bottom/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924996" />
+    <state width="1877" height="379" key="GridCell.Tab.2.center" timestamp="1601814924996">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.2.center/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924996" />
+    <state width="1877" height="379" key="GridCell.Tab.2.left" timestamp="1601814924996">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.2.left/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924996" />
+    <state width="1877" height="379" key="GridCell.Tab.2.right" timestamp="1601814924996">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.2.right/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924996" />
+    <state width="1877" height="379" key="GridCell.Tab.3.bottom" timestamp="1601814924996">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.3.bottom/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924996" />
+    <state width="1877" height="379" key="GridCell.Tab.3.center" timestamp="1601814924996">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.3.center/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924996" />
+    <state width="1877" height="379" key="GridCell.Tab.3.left" timestamp="1601814924996">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.3.left/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924996" />
+    <state width="1877" height="379" key="GridCell.Tab.3.right" timestamp="1601814924996">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="379" key="GridCell.Tab.3.right/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601814924996" />
     <state x="461" y="170" key="SettingsEditor" timestamp="1601752588058">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -137,5 +217,24 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-2560.0.2560.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601761822900" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs</url>
+          <line>56</line>
+          <properties documentPath="D:\workfolder\AT\ld-47\Assets\Scripts\MainMenu\MainMenuButtons.cs" initialLine="50">
+            <startOffsets>
+              <option value="1635" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1678" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

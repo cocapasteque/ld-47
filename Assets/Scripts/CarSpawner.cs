@@ -68,6 +68,7 @@ public class CarSpawner : MonoBehaviour
             }
         }
 
+        Debug.Log("Car spawned");
         CarSpawned?.Invoke();
     }
 

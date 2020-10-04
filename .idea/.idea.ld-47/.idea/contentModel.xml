@@ -844,7 +844,7 @@
           <e p="MainMenu" t="Include">
             <e p="CameraRotation.cs" t="Include" />
             <e p="MainMenuButtons.cs" t="Include" />
-            <e p="TextMeshButton.cs" t="Include" />
+            <e p="MenuButton.cs" t="Include" />
           </e>
           <e p="NpcCarControls.cs" t="Include" />
           <e p="Utils" t="Include">
