@@ -13282,6 +13282,9 @@ MonoBehaviour:
   - {fileID: 5422345110371618421}
   - {fileID: 1721555135941736342}
   fracturedState: {fileID: 7011971322932302835}
+  HonkEffectProbabilities: {x: 0, y: 0}
+  HonkCooldown: 1
+  HitCooldown: 0.3
   _blinkColor: {r: 0, g: 0, b: 0, a: 0}
   honkClip: {fileID: 8300000, guid: 5e75182c838399c4a9b39ad2448968c1, type: 3}
   source: {fileID: 0}
@@ -13323,7 +13326,8 @@ AudioSource:
   m_GameObject: {fileID: 8996265164613255582}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3320691908528680258, guid: ecc91c6c39573814e96fa00d1cb8bd40,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
