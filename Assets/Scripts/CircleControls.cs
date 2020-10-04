@@ -6,7 +6,7 @@ using UnityEngine;
 public class CircleControls : MonoBehaviour
 {
     public GameObject explosionPrefab;
-    
+
     public Vector2 RadiusBounds;
     public Vector2 SpeedBounds;
 
@@ -33,6 +33,10 @@ public class CircleControls : MonoBehaviour
     private Quaternion turningRot;
     private float lastTurnTime = 0f;
 
+    public GameObject[] playerStates;
+    public GameObject fracturedState;
+    private int _currentPlayerState = 0;
+
     private void Start()
     {
         Init();
@@ -51,16 +55,19 @@ public class CircleControls : MonoBehaviour
     void Update()
     {
         angle -= speed * Time.deltaTime / radius;
-        baseRot = Quaternion.LookRotation(Vector3.Cross(transform.position, Vector3.up));     
+        baseRot = Quaternion.LookRotation(Vector3.Cross(transform.position, Vector3.up));
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            var speedGain = AccelerationCurve.Evaluate(Mathf.InverseLerp(SpeedBounds[0], SpeedBounds[1], speed)) * Acceleration * Time.deltaTime;
+            var speedGain = AccelerationCurve.Evaluate(Mathf.InverseLerp(SpeedBounds[0], SpeedBounds[1], speed)) *
+                            Acceleration * Time.deltaTime;
             speed = Mathf.Clamp(speed + speedGain, SpeedBounds[0], SpeedBounds[1]);
         }
+
         if (Input.GetKey(KeyCode.DownArrow))
         {
             speed = Mathf.Clamp(speed - Acceleration * Time.deltaTime, SpeedBounds[0], SpeedBounds[1]);
         }
+
         speedRatio = speed / SpeedBounds[1];
         if (Input.GetKey(KeyCode.LeftArrow))
         {
@@ -69,7 +76,8 @@ public class CircleControls : MonoBehaviour
                 lastTurnTime = Time.time;
                 turningLeftTime += Time.deltaTime;
                 var turningModifier = TurningCurve.Evaluate(turningLeftTime / MaxTurningDuration);
-                radius = Mathf.Clamp(radius - TurningSpeed * turningModifier * speedRatio * Time.deltaTime, RadiusBounds[0], RadiusBounds[1]);
+                radius = Mathf.Clamp(radius - TurningSpeed * turningModifier * speedRatio * Time.deltaTime,
+                    RadiusBounds[0], RadiusBounds[1]);
                 turningRot = Quaternion.AngleAxis(-turningModifier * MaxTurningAngle * speedRatio, Vector3.up);
             }
             else
@@ -81,6 +89,7 @@ public class CircleControls : MonoBehaviour
         {
             turningLeftTime = 0f;
         }
+
         if (Input.GetKey(KeyCode.RightArrow))
         {
             if (radius < RadiusBounds[1])
@@ -88,7 +97,8 @@ public class CircleControls : MonoBehaviour
                 lastTurnTime = Time.time;
                 turningRightTime += Time.deltaTime;
                 var turningModifier = TurningCurve.Evaluate(turningRightTime / MaxTurningDuration);
-                radius = Mathf.Clamp(radius + TurningSpeed * turningModifier * speedRatio * Time.deltaTime, RadiusBounds[0], RadiusBounds[1]);
+                radius = Mathf.Clamp(radius + TurningSpeed * turningModifier * speedRatio * Time.deltaTime,
+                    RadiusBounds[0], RadiusBounds[1]);
                 turningRot = Quaternion.AngleAxis(turningModifier * MaxTurningAngle * speedRatio, Vector3.up);
             }
             else
@@ -100,12 +110,14 @@ public class CircleControls : MonoBehaviour
         {
             turningRightTime = 0f;
         }
+
         if (turningRightTime == 0f && turningLeftTime == 0f)
         {
             turningRot = Quaternion.Slerp(turningRot, Quaternion.identity, Time.time - lastTurnTime);
         }
+
         transform.position = new Vector3(radius * Mathf.Sin(angle), 0f, radius * Mathf.Cos(angle));
-        transform.rotation = baseRot * turningRot;     
+        transform.rotation = baseRot * turningRot;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -122,8 +134,35 @@ public class CircleControls : MonoBehaviour
             other.GetComponent<CarMovement>().enabled = false;
             var rb = other.GetComponent<Rigidbody>();
             rb.isKinematic = false;
-            rb.AddExplosionForce(300, rb.transform.position - Vector3.up, 2, 2);
+            rb.AddExplosionForce(500, rb.transform.position - Vector3.up, 2, 2);
+
+            playerStates[_currentPlayerState].SetActive(false);
+            if (++_currentPlayerState > playerStates.Length - 1)
+            {
+                Debug.Log("Game over");
+                PlayerGoBrr();
+            }
+            else
+            {
+                playerStates[_currentPlayerState].SetActive(true);
+            }
+
             Debug.Log("HIT");
         }
+    }
+
+    public void PlayerGoBrr()
+    {
+        fracturedState.SetActive(true);
+        var explosion = Instantiate(explosionPrefab, fracturedState.transform.position, Quaternion.identity);
+        Destroy(explosion, 5);
+        
+        foreach (Transform child in fracturedState.transform)
+        {
+            child.GetComponent<Rigidbody>()
+                .AddExplosionForce(600, fracturedState.transform.position - Vector3.up, 2, 50);
+        }
+
+        enabled = false;
     }
 }

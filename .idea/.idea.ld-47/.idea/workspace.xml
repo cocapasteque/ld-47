@@ -21,10 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2a1f72ec-6286-46ed-9a3e-6adbad6e14e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Untitled-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Untitled-5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CircleControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CircleControls.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,12 +50,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/CameraRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCameraControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFollower.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CircleControls.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/TextMeshButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MenuButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraSpeedEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CircleControls.cs" />
       </list>
     </option>
   </component>
@@ -103,7 +103,7 @@
       <updated>1601722294085</updated>
       <workItem from="1601722310942" duration="1034000" />
       <workItem from="1601752185007" duration="4490000" />
-      <workItem from="1601800432110" duration="9738000" />
+      <workItem from="1601800432110" duration="10823000" />
     </task>
     <servers />
   </component>
