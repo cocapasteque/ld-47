@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CircleControls : MonoBehaviour
 {
+    public GameObject explosionPrefab;
+    
     public Vector2 RadiusBounds;
     public Vector2 SpeedBounds;
 
@@ -100,6 +102,13 @@ public class CircleControls : MonoBehaviour
         }
         else
         {
+            var explosion = Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
+            Destroy(explosion, 5);
+            other.GetComponent<NpcCarControls>().enabled = false;
+            other.GetComponent<CarMovement>().enabled = false;
+            var rb = other.GetComponent<Rigidbody>();
+            rb.isKinematic = false;
+            rb.AddExplosionForce(300, rb.transform.position - Vector3.up, 2, 2);
             Debug.Log("HIT");
         }
     }
