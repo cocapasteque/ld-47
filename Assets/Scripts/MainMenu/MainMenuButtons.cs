@@ -34,6 +34,7 @@ namespace MainMenu
                 StartCoroutine(OnCarSpawned());
                 if (string.IsNullOrEmpty(PlayerPrefs.GetString("Playername")))
                 {
+                    _ready = false;
                     keyboardView.Show();
                 }
             };
@@ -45,6 +46,7 @@ namespace MainMenu
             {
                 PlayerPrefs.SetString("Playername", input.text);
                 keyboardView.Hide();
+                _ready = true;
             }
         }
 
