@@ -58,7 +58,7 @@ public class CircleControls : MonoBehaviour
 
     public AudioClip honkClip;
     public AudioSource source;
-
+    public GameOverScreen gameOver;
     private void Start()
     {
         Init();
@@ -275,6 +275,8 @@ public class CircleControls : MonoBehaviour
                 .AddExplosionForce(600, fracturedState.transform.position - Vector3.up, 2, 50);
         }
 
+        gameOver.GameOver(CarSpawner.Instance.CurrentLevel + 1);
+        
         enabled = false;
     }
 

@@ -23,11 +23,12 @@ public class CarSpawner : MonoBehaviour
     public int CurrentLevel = 0;
     public CanvasGroup Cg;
     public float FadeDuration;
-
+    
     public List<GameObject> Exits;
 
     private static CarSpawner _instance;
-
+   
+    
     public static CarSpawner Instance { get { return _instance; } }
 
 
