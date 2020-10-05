@@ -86,23 +86,26 @@ public class NpcCarControls : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Npc"))
+        if (CarSpawner.Instance.FunMode)
         {
-            Rigidbody otherRb = collision.rigidbody;
+            if (collision.gameObject.CompareTag("Npc"))
+            {
+                Rigidbody otherRb = collision.rigidbody;
 
-            source.PlayOneShot(exploClip, 1);
-            var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            Destroy(explosion, 5);
-            GetComponent<NpcCarControls>().enabled = false;
-            GetComponent<CarMovement>().enabled = false;
-            rb.isKinematic = false;
-            rb.AddExplosionForce(200, rb.transform.position - Vector3.up, 2, 2);
-            collision.gameObject.GetComponent<NpcCarControls>().enabled = false;
-            collision.gameObject.GetComponent<CarMovement>().enabled = false;
-            otherRb.isKinematic = false;
-            otherRb.AddExplosionForce(200, rb.transform.position - Vector3.up, 2, 2);
-            CameraShake(0.2f);
-        }        
+                source.PlayOneShot(exploClip, 1);
+                var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+                Destroy(explosion, 5);
+                GetComponent<NpcCarControls>().enabled = false;
+                GetComponent<CarMovement>().enabled = false;
+                rb.isKinematic = false;
+                rb.AddExplosionForce(200, rb.transform.position - Vector3.up, 2, 2);
+                collision.gameObject.GetComponent<NpcCarControls>().enabled = false;
+                collision.gameObject.GetComponent<CarMovement>().enabled = false;
+                otherRb.isKinematic = false;
+                otherRb.AddExplosionForce(200, rb.transform.position - Vector3.up, 2, 2);
+                CameraShake(0.2f);
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -115,7 +118,8 @@ public class NpcCarControls : MonoBehaviour
             GetComponent<NpcCarControls>().enabled = false;
             GetComponent<CarMovement>().enabled = false;
             rb.isKinematic = false;
-            rb.AddExplosionForce(200, rb.transform.position - Vector3.up, 2, 2);
+            rb.AddExplosionForce(400, rb.transform.position - Vector3.up, 2, 2);
+            CameraShake(0.2f);
         }
     }
 

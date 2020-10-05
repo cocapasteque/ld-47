@@ -8,12 +8,14 @@ namespace Utils
     {
         public TMP_Text position;
         public TMP_Text name;
+        public TMP_Text level;
 
         public void SetEntry(LeaderboardEntry entry, int pos)
         {
             var meta = JsonConvert.DeserializeObject<LeaderboardMeta>(entry.Metadata);
-            position.text = $"#{pos}";
-            name.text = $"{entry.Key} - Level {meta?.Level}";
+            position.text = $"{pos}";
+            name.text = $"{entry.Key}";
+            level.text = $"- Level {meta?.Level}";
         }
     }
 }

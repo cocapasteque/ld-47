@@ -152,7 +152,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: 'Fun mode
+
+    off'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb278ca75fe6d654f838b222f2fbc91e, type: 2}
   m_sharedMaterial: {fileID: -7469638125660255791, guid: cb278ca75fe6d654f838b222f2fbc91e,
@@ -180,12 +182,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
+  m_fontSize: 10.5
   m_fontSizeBase: 16
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10.5
+  m_fontSizeMax: 16
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -235,5 +237,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.04, y: 3.08, z: 0}
-  m_Center: {x: -0.009699702, y: -0.48522115, z: 1.2606138e-13}
+  m_Size: {x: 6.04, y: 3.24, z: 0}
+  m_Center: {x: -0.009699702, y: 0.02, z: 1.2606138e-13}

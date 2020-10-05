@@ -26,6 +26,7 @@ public class CarSpawner : MonoBehaviour
     public float FadeDuration;
 
     public List<GameObject> Exits;
+    public bool FunMode;
 
     private static CarSpawner _instance;
     public TMP_Text level;
@@ -50,6 +51,7 @@ public class CarSpawner : MonoBehaviour
 
     private void Start()
     {
+        FunMode = PlayerPrefs.HasKey("FunMode") ? Convert.ToBoolean(PlayerPrefs.GetInt("FunMode")) : false;
         if (level != null) level.text = $"Level 1";
         CalculateLaneProbabilities();
         SpawnCars();

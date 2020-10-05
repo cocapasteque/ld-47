@@ -20,15 +20,18 @@ namespace MainMenu
         private GameObject[] _buttons;
         private bool _ready;
         private bool _nameReady = false;
-        private string[] _buttonTexts = new[] {"Start", "Exit"};
+        private string[] _buttonTexts = new[] {"Start", "Exit", "Fun mode\noff"};
         public Button.ButtonClickedEvent[] buttonActions;
         public RawImage fadeImage;
 
         public UIView keyboardView;
         public TMP_InputField input;
 
+        private bool funMode;
+
         private void Awake()
         {
+            funMode = PlayerPrefs.HasKey("FunMode") ? Convert.ToBoolean(PlayerPrefs.GetInt("FunMode")) : false;
             _spawner = GetComponent<CarSpawner>();
             _spawner.CarSpawned += () =>
             {
@@ -67,7 +70,7 @@ namespace MainMenu
             yield return null;
             _cars = new Transform[3];
 
-            for (var i = 0; i < 2; i++)
+            for (var i = 0; i < 3; i++)
             {
                 Transform car = null;
                 while (car == null || _cars.Contains(car))
@@ -78,9 +81,9 @@ namespace MainMenu
                 _cars[i] = car;
             }
 
-            _buttons = new GameObject[2];
+            _buttons = new GameObject[3];
 
-            for (var i = 0; i < 2; i++)
+            for (var i = 0; i < 3; i++)
             {
                 var button = Instantiate(buttonPrefab, _cars[i]);
                 button.transform.localPosition = Vector3.up * 2;
@@ -120,6 +123,7 @@ namespace MainMenu
                     }
                 }
             }
+            _buttons[2].GetComponentInChildren<TMP_Text>().text = "Fun Mode\n" + (funMode ? "On" : "Off");
         }
 
         public Transform GetCar()
@@ -156,6 +160,12 @@ namespace MainMenu
 #else
             Application.Quit();
 #endif
+        }
+
+        public void ToggleFunMode()
+        {
+            funMode = !funMode;
+            PlayerPrefs.SetInt("FunMode", funMode ? 1 : 0);
         }
 
         IEnumerator Fade(bool fadeIn = false)
