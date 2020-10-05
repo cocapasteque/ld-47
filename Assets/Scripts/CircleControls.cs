@@ -22,6 +22,11 @@ public class CircleControls : MonoBehaviour
     public AnimationCurve ExitTurningY;
     public AnimationCurve ExitTurningZ;
 
+    public float GameOverSpinDuration;
+    public AnimationCurve GameOverSpinX;
+    public AnimationCurve GameOverSpinY;
+    public AnimationCurve GameOverSpinZ;
+
     public float Acceleration;
     public float BaseTurningSpeed;
     public float MaxTurningDuration;
@@ -287,6 +292,7 @@ public class CircleControls : MonoBehaviour
 
     public void PlayerGoBrr()
     {
+        exited = true;
         fracturedState.SetActive(true);
         var explosion = Instantiate(explosionPrefab, fracturedState.transform.position, Quaternion.identity);
         Destroy(explosion, 5);
@@ -296,10 +302,22 @@ public class CircleControls : MonoBehaviour
             child.GetComponent<Rigidbody>()
                 .AddExplosionForce(600, fracturedState.transform.position - Vector3.up, 2, 50);
         }
-
         gameOver.GameOver(CarSpawner.Instance.CurrentLevel + 1);
 
-        enabled = false;
+        StartCoroutine(CameraPan());
+
+        IEnumerator CameraPan()
+        {
+            float startTime = Time.time;
+            var t = 0f;
+            var transposer = vcam.GetCinemachineComponent<CinemachineTransposer>();
+            while (true)
+            {
+                t = (Time.time - startTime) / GameOverSpinDuration;
+                transposer.m_FollowOffset = new Vector3(GameOverSpinX.Evaluate(t), GameOverSpinY.Evaluate(t), GameOverSpinZ.Evaluate(t));
+                yield return null;
+            }
+        }
     }
 
     public void CameraShake(float duration)
