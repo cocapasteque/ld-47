@@ -65,6 +65,9 @@ public class CircleControls : MonoBehaviour
 
     [ColorUsage(false, true)] public Color _blinkColor;
 
+    public Vector2 EnginePitch;
+
+    public AudioSource honkAudio;
     public AudioClip honkClip;
     public AudioSource source;
     public AudioClip exploClip;
@@ -110,9 +113,11 @@ public class CircleControls : MonoBehaviour
         totalLoops.text = $"Total loops: {_totalLoops}";
         levelLoops.text = $"Loops: {_levelLoops}";
         PlayerPrefs.SetInt("TotalLoops", _totalLoops);
+        source.pitch = Mathf.Lerp(EnginePitch[0], EnginePitch[1], speed / maxSpeed);
 
         if (exited)
         {
+            source.Stop();
             return;
         }
 
@@ -196,7 +201,7 @@ public class CircleControls : MonoBehaviour
     private void Honk()
     {
         currentHonkCooldown = 0;
-        source.PlayOneShot(honkClip);
+        honkAudio.PlayOneShot(honkClip);
         // Get Npc around the player
         var hits = Physics.OverlapSphere(transform.position, 2).ToList();
         hits = hits.Distinct(new ColliderComparer()).ToList();
