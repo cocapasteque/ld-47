@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
+using Doozy.Engine.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -22,10 +23,29 @@ namespace MainMenu
         public Button.ButtonClickedEvent[] buttonActions;
         public RawImage fadeImage;
 
+        public UIView keyboardView;
+        public TMP_InputField input;
+        
         private void Awake()
         {
             _spawner = GetComponent<CarSpawner>();
-            _spawner.CarSpawned += () => { StartCoroutine(OnCarSpawned()); };
+            _spawner.CarSpawned += () =>
+            {
+                StartCoroutine(OnCarSpawned());
+                if (string.IsNullOrEmpty(PlayerPrefs.GetString("Playername")))
+                {
+                    keyboardView.Show();
+                }
+            };
+        }
+        
+        public void SaveName()
+        {
+            if (!string.IsNullOrWhiteSpace(input.text))
+            {
+                PlayerPrefs.SetString("Playername", input.text);
+                keyboardView.Hide();
+            }
         }
 
         public IEnumerator OnCarSpawned()

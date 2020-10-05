@@ -891,6 +891,7 @@
             <e p="MainMenuButtons.cs" t="Include" />
             <e p="MenuButton.cs" t="Include" />
           </e>
+          <e p="MontgolfierMovement.cs" t="Include" />
           <e p="NpcCarControls.cs" t="Include" />
           <e p="Utils" t="Include">
             <e p="AudioManager.cs" t="Include" />
