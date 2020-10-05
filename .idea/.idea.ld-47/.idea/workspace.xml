@@ -20,11 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a1f72ec-6286-46ed-9a3e-6adbad6e14e3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Smoke_Particle 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Smoke_Particle 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSpeedEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraSpeedEffect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CircleControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CircleControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +58,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerFollower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/TextMeshButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MenuButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraSpeedEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArrowMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NpcCarControls.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameOverScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraSpeedEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CircleControls.cs" />
       </list>
     </option>
@@ -108,7 +114,7 @@
       <workItem from="1601722310942" duration="1034000" />
       <workItem from="1601752185007" duration="4490000" />
       <workItem from="1601800432110" duration="20687000" />
-      <workItem from="1601881805946" duration="1973000" />
+      <workItem from="1601881805946" duration="4970000" />
     </task>
     <servers />
   </component>

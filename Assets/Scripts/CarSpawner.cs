@@ -50,7 +50,7 @@ public class CarSpawner : MonoBehaviour
 
     private void Start()
     {
-        level.text = $"Level 1";
+        if (level != null) level.text = $"Level 1";
         CalculateLaneProbabilities();
         SpawnCars();
     }

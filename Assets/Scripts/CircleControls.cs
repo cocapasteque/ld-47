@@ -45,10 +45,11 @@ public class CircleControls : MonoBehaviour
     public GameObject[] playerStates;
     public GameObject fracturedState;
     private int _currentPlayerState = 0;
-    private bool exited = false;
+    public bool exited = false;
 
     [Tooltip("0 - 1st value:\tnegative\n1st - 2nd value:\tneutral\n2nd value - 1:\tpositive")]
     public Vector2 HonkEffectProbabilities;
+
     public float HonkCooldown = 1f;
     private float currentHonkCooldown = 10f;
 
@@ -59,13 +60,14 @@ public class CircleControls : MonoBehaviour
 
     public AudioClip honkClip;
     public AudioSource source;
+    public AudioClip exploClip;
     public GameOverScreen gameOver;
 
     public TMP_Text totalLoops;
     public TMP_Text levelLoops;
     private int _totalLoops;
     private int _levelLoops;
-    
+
     private void Start()
     {
         Init();
@@ -79,7 +81,8 @@ public class CircleControls : MonoBehaviour
         GetComponent<Collider>().enabled = true;
         exited = false;
         var transposer = vcam.GetCinemachineComponent<CinemachineTransposer>();
-        transposer.m_FollowOffset = new Vector3(ExitTurningX.Evaluate(0), ExitTurningY.Evaluate(0), ExitTurningZ.Evaluate(0));
+        transposer.m_FollowOffset =
+            new Vector3(ExitTurningX.Evaluate(0), ExitTurningY.Evaluate(0), ExitTurningZ.Evaluate(0));
         var levelStats = CarSpawner.Instance.levelStats;
         var currentLevel = CarSpawner.Instance.CurrentLevel;
         maxSpeed = levelStats.FirstLevelPlayerMaxSpeed * Mathf.Pow(levelStats.SpeedIncreaseFactor, currentLevel);
@@ -98,7 +101,7 @@ public class CircleControls : MonoBehaviour
         totalLoops.text = $"Total loops: {_totalLoops}";
         levelLoops.text = $"Loops: {_levelLoops}";
         PlayerPrefs.SetInt("TotalLoops", _totalLoops);
-        
+
         if (exited)
         {
             return;
@@ -187,7 +190,7 @@ public class CircleControls : MonoBehaviour
         var hits = Physics.OverlapSphere(transform.position, 2).ToList();
         hits = hits.Distinct(new ColliderComparer()).ToList();
         foreach (var hit in hits)
-        {        
+        {
             var npc = hit.GetComponent<NpcCarControls>();
             if (npc == null) continue;
             var diff = npc.transform.position - transform.position;
@@ -207,9 +210,7 @@ public class CircleControls : MonoBehaviour
             }
             else
                 Debug.Log("neutral");
-
         }
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -228,7 +229,8 @@ public class CircleControls : MonoBehaviour
             _totalLoops++;
         }
         else
-        {                   
+        {
+            source.PlayOneShot(exploClip, 1);
             var explosion = Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
             Destroy(explosion, 5);
             other.GetComponent<NpcCarControls>().enabled = false;
@@ -249,7 +251,7 @@ public class CircleControls : MonoBehaviour
                 playerStates[_currentPlayerState].SetActive(true);
                 StartCoroutine(BlinkRoutine());
             }
-
+            CameraShake(0.2f);
             Debug.Log("HIT");
         }
     }
@@ -285,7 +287,7 @@ public class CircleControls : MonoBehaviour
         fracturedState.SetActive(true);
         var explosion = Instantiate(explosionPrefab, fracturedState.transform.position, Quaternion.identity);
         Destroy(explosion, 5);
-
+        CameraShake(.8f);
         foreach (Transform child in fracturedState.transform)
         {
             child.GetComponent<Rigidbody>()
@@ -293,8 +295,20 @@ public class CircleControls : MonoBehaviour
         }
 
         gameOver.GameOver(CarSpawner.Instance.CurrentLevel + 1);
-        
+
         enabled = false;
+    }
+
+    public void CameraShake(float duration)
+    {
+        StartCoroutine(Work());
+        IEnumerator Work()
+        {
+            var noise = vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+            noise.m_AmplitudeGain = 5;
+            yield return new WaitForSeconds(duration);
+            noise.m_AmplitudeGain = 0;
+        }
     }
 
     private void Exit()
@@ -315,16 +329,16 @@ public class CircleControls : MonoBehaviour
                     ExitTurningZ.Evaluate(t));
                 yield return null;
             }
+
             _levelLoops = 0;
         }
     }
-    
+
     class ColliderComparer : IEqualityComparer<Collider>
     {
         // Products are equal if their names and product numbers are equal.
         public bool Equals(Collider x, Collider y)
         {
-
             //Check whether the compared objects reference the same data.
             if (Object.ReferenceEquals(x, y)) return true;
 
