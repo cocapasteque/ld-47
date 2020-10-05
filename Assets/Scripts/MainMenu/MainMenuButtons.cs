@@ -157,6 +157,8 @@ namespace MainMenu
         {
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
+#elif (UNITY_WEBGL)
+            Application.OpenURL("https://cocapasteque.itch.io/stuck-in-paris");
 #else
             Application.Quit();
 #endif
