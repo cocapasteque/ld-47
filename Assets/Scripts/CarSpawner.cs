@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using System;
+using TMPro;
 
 public class CarSpawner : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class CarSpawner : MonoBehaviour
     public Transform CarParent;
 
     public Action CarSpawned;
-    
+
     public Dictionary<int, List<GameObject>> CarsPerLane;
 
     public LevelStats levelStats;
@@ -23,13 +24,16 @@ public class CarSpawner : MonoBehaviour
     public int CurrentLevel = 0;
     public CanvasGroup Cg;
     public float FadeDuration;
-    
+
     public List<GameObject> Exits;
 
     private static CarSpawner _instance;
-   
-    
-    public static CarSpawner Instance { get { return _instance; } }
+    public TMP_Text level;
+
+    public static CarSpawner Instance
+    {
+        get { return _instance; }
+    }
 
 
     private void Awake()
@@ -46,6 +50,7 @@ public class CarSpawner : MonoBehaviour
 
     private void Start()
     {
+        level.text = $"Level 1";
         CalculateLaneProbabilities();
         SpawnCars();
     }
@@ -59,16 +64,19 @@ public class CarSpawner : MonoBehaviour
         {
             exit.SetActive(false);
         }
+
         if (Exits.Count > 0)
         {
             var rnd = UnityEngine.Random.Range(0, Exits.Count);
             Exits[rnd].SetActive(true);
         }
+
         CarsPerLane = new Dictionary<int, List<GameObject>>();
-        for(int i = 0; i < Lanes; i++)
+        for (int i = 0; i < Lanes; i++)
         {
             CarsPerLane.Add(i, new List<GameObject>());
         }
+
         for (int i = 0; i < cars; i++)
         {
             int prefabIndex = UnityEngine.Random.Range(0, CarPrefabs.Count);
@@ -93,15 +101,16 @@ public class CarSpawner : MonoBehaviour
 
     private Vector2 GetCurrentLaneChangeCooldown()
     {
-        var currentAnimPos = (float)CurrentLevel / levelStats.MinLaneChangeCooldownLevel;
+        var currentAnimPos = (float) CurrentLevel / levelStats.MinLaneChangeCooldownLevel;
         var t = levelStats.LaneChangeCooldownDecrease.Evaluate(currentAnimPos);
-        Vector2 result = t * (levelStats.MinLaneChangeCooldown - levelStats.FirstLevelLaneChangeCooldown) + levelStats.FirstLevelLaneChangeCooldown;
+        Vector2 result = t * (levelStats.MinLaneChangeCooldown - levelStats.FirstLevelLaneChangeCooldown) +
+                         levelStats.FirstLevelLaneChangeCooldown;
         return result;
     }
 
     private int GetCurrentNumberOfCars()
     {
-        var currentAnimPos = (float)CurrentLevel /levelStats.MaxCarLevel;
+        var currentAnimPos = (float) CurrentLevel / levelStats.MaxCarLevel;
         var t = levelStats.CarIncrease.Evaluate(currentAnimPos);
         int result = Mathf.FloorToInt(t * (levelStats.MaxCars - levelStats.FirstLevelCars) + levelStats.FirstLevelCars);
         return result;
@@ -115,10 +124,9 @@ public class CarSpawner : MonoBehaviour
 
     private Tuple<int, Vector3, float> FindSpawnPos(float dist)
     {
-        
         float laneProb = UnityEngine.Random.Range(0f, 1f);
         int lane = 0;
-        for(int i = 0; i < laneProbabilities.Count; i++)
+        for (int i = 0; i < laneProbabilities.Count; i++)
         {
             if (laneProb <= laneProbabilities[i])
             {
@@ -129,6 +137,7 @@ public class CarSpawner : MonoBehaviour
                 lane++;
             }
         }
+
         float radius = laneRadii[lane];
         bool posFound = true;
         Vector3 pos = Vector3.zero;
@@ -137,19 +146,22 @@ public class CarSpawner : MonoBehaviour
         {
             angle = UnityEngine.Random.Range(0f, 360f);
             pos = GetPosFromAngle(radius, angle);
-            foreach(var car in CarsPerLane[lane])
+            foreach (var car in CarsPerLane[lane])
             {
-                if (Vector3.Distance(pos, car.transform.position) < Mathf.Max(dist, car.GetComponent<NpcCarControls>().minDistance))
+                if (Vector3.Distance(pos, car.transform.position) <
+                    Mathf.Max(dist, car.GetComponent<NpcCarControls>().minDistance))
                 {
                     posFound = false;
                     break;
                 }
             }
+
             if (posFound)
             {
                 break;
             }
         }
+
         if (posFound)
         {
             return new Tuple<int, Vector3, float>(lane, pos, angle);
@@ -167,6 +179,7 @@ public class CarSpawner : MonoBehaviour
         {
             laneRadii.Add(RadiusBounds[0] + i * ((RadiusBounds[1] - RadiusBounds[0]) / (Lanes - 1)));
         }
+
         var sum = laneRadii.Sum();
         laneProbabilities = new List<float>();
         foreach (var radius in laneRadii)
@@ -201,9 +214,10 @@ public class CarSpawner : MonoBehaviour
                 break;
             }
         }
+
         return canSwitch;
-    }  
-    
+    }
+
     public void SwitchLane(GameObject car, int oldLane, int newLane)
     {
         CarsPerLane[oldLane].Remove(car);
@@ -212,16 +226,18 @@ public class CarSpawner : MonoBehaviour
 
     private Vector3 GetPosFromAngle(float radius, float angle)
     {
-        return new Vector3(radius * Mathf.Sin(angle), 0 , radius * Mathf.Cos(angle));
+        return new Vector3(radius * Mathf.Sin(angle), 0, radius * Mathf.Cos(angle));
     }
 
     public void NextLevel()
     {
         CurrentLevel++;
-        foreach(Transform car in CarParent)
+        level.text = $"Level {CurrentLevel + 1}";
+        foreach (Transform car in CarParent)
         {
-            Destroy(car.gameObject);         
+            Destroy(car.gameObject);
         }
+
         SpawnCars();
         var player = FindObjectOfType<CircleControls>();
         player.Init();
@@ -237,6 +253,7 @@ public class CarSpawner : MonoBehaviour
                 yield return null;
                 Cg.alpha = 1f - (Time.time - startTime) / FadeDuration;
             }
+
             Cg.alpha = 0f;
         }
     }

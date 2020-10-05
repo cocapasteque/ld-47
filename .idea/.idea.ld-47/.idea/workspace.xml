@@ -20,14 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a1f72ec-6286-46ed-9a3e-6adbad6e14e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld-47/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Master.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Master.mixer" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CircleControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CircleControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,9 +57,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MainMenuButtons.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NpcCarControls.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameOverScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CarSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CircleControls.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameOverScreen.cs" />
       </list>
     </option>
   </component>
@@ -111,7 +108,7 @@
       <workItem from="1601722310942" duration="1034000" />
       <workItem from="1601752185007" duration="4490000" />
       <workItem from="1601800432110" duration="20687000" />
-      <workItem from="1601881805946" duration="1022000" />
+      <workItem from="1601881805946" duration="1973000" />
     </task>
     <servers />
   </component>

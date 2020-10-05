@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Cinemachine;
+using TMPro;
 using Utils;
 
 public class CircleControls : MonoBehaviour
@@ -59,6 +60,12 @@ public class CircleControls : MonoBehaviour
     public AudioClip honkClip;
     public AudioSource source;
     public GameOverScreen gameOver;
+
+    public TMP_Text totalLoops;
+    public TMP_Text levelLoops;
+    private int _totalLoops;
+    private int _levelLoops;
+    
     private void Start()
     {
         Init();
@@ -67,6 +74,7 @@ public class CircleControls : MonoBehaviour
 
     public void Init()
     {
+        _totalLoops = PlayerPrefs.GetInt("TotalLoops", 0);
         angle = 0;
         GetComponent<Collider>().enabled = true;
         exited = false;
@@ -87,6 +95,10 @@ public class CircleControls : MonoBehaviour
 
     void Update()
     {
+        totalLoops.text = $"Total loops: {_totalLoops}";
+        levelLoops.text = $"Loops: {_levelLoops}";
+        PlayerPrefs.SetInt("TotalLoops", _totalLoops);
+        
         if (exited)
         {
             return;
@@ -202,13 +214,18 @@ public class CircleControls : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Exit")
+        if (other.CompareTag("Exit"))
         {
             if (!exited)
             {
                 other.GetComponent<Exit>().StartExiting(gameObject);
                 Exit();
             }
+        }
+        else if (other.CompareTag("LoopCounter"))
+        {
+            _levelLoops++;
+            _totalLoops++;
         }
         else
         {                   
@@ -298,6 +315,7 @@ public class CircleControls : MonoBehaviour
                     ExitTurningZ.Evaluate(t));
                 yield return null;
             }
+            _levelLoops = 0;
         }
     }
     
