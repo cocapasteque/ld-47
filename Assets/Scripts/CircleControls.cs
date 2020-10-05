@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Cinemachine;
+using Newtonsoft.Json;
 using TMPro;
 using Utils;
 
@@ -239,7 +240,7 @@ public class CircleControls : MonoBehaviour
             _totalLoops++;
         }
         else
-        {           
+        {
             if (_currentCooldown <= HitCooldown) return;
             _currentCooldown = 0;
             playerStates[_currentPlayerState].SetActive(false);
@@ -252,7 +253,8 @@ public class CircleControls : MonoBehaviour
             {
                 playerStates[_currentPlayerState].SetActive(true);
                 StartCoroutine(BlinkRoutine());
-            }          
+            }
+
             Debug.Log("HIT");
         }
     }
@@ -295,9 +297,20 @@ public class CircleControls : MonoBehaviour
             child.GetComponent<Rigidbody>()
                 .AddExplosionForce(600, fracturedState.transform.position - Vector3.up, 2, 50);
         }
+
         gameOver.GameOver(CarSpawner.Instance.CurrentLevel + 1);
 
         StartCoroutine(CameraPan());
+
+        // Send Scores
+        var level = CarSpawner.Instance.CurrentLevel + 1;
+        var name = PlayerPrefs.GetString("Playername");
+
+        LeaderboardController.Instance.PostEntry(new LeaderboardEntry
+        {
+            Key = name,
+            Metadata = JsonConvert.SerializeObject(new LeaderboardMeta {Level = level})
+        }, level, "level");
 
         IEnumerator CameraPan()
         {
@@ -307,7 +320,8 @@ public class CircleControls : MonoBehaviour
             while (true)
             {
                 t = (Time.time - startTime) / GameOverSpinDuration;
-                transposer.m_FollowOffset = new Vector3(GameOverSpinX.Evaluate(t), GameOverSpinY.Evaluate(t), GameOverSpinZ.Evaluate(t));
+                transposer.m_FollowOffset = new Vector3(GameOverSpinX.Evaluate(t), GameOverSpinY.Evaluate(t),
+                    GameOverSpinZ.Evaluate(t));
                 yield return null;
             }
         }
@@ -357,9 +371,11 @@ public class CircleControls : MonoBehaviour
             return obj.GetHashCode();
         }
     }
+
     public void CameraShake(float duration)
     {
         StartCoroutine(Work());
+
         IEnumerator Work()
         {
             var noise = vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
