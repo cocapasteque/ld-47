@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -26238,6 +26238,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 478606, guid: a9cc5585b9634a9449920c03ec6bc243,
     type: 3}
   m_PrefabInstance: {fileID: 1175576792}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &810283050 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7317018043582777432, guid: 493c27704a4d73447a268185f2770673,
+    type: 3}
+  m_PrefabInstance: {fileID: 1934485317}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &811060571
 PrefabInstance:
@@ -67091,6 +67097,11 @@ PrefabInstance:
       propertyPath: EnginePitch.y
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: -8676759040646921074, guid: 493c27704a4d73447a268185f2770673,
+        type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 810283050}
     - target: {fileID: 1737834557, guid: 493c27704a4d73447a268185f2770673, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.22894502
