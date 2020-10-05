@@ -77,7 +77,7 @@ public class CircleControls : MonoBehaviour
     public TMP_Text levelLoops;
     private int _totalLoops;
     private int _levelLoops;
-
+    private Quaternion targetRot;
     private void Start()
     {
         Init();
@@ -148,7 +148,8 @@ public class CircleControls : MonoBehaviour
                 var turningModifier = TurningCurve.Evaluate(turningLeftTime / MaxTurningDuration);
                 radius = Mathf.Clamp(radius - turningSpeed * turningModifier * speedRatio * Time.deltaTime,
                     RadiusBounds[0], RadiusBounds[1]);
-                turningRot = Quaternion.AngleAxis(-turningModifier * MaxTurningAngle * speedRatio, Vector3.up);
+                targetRot = Quaternion.AngleAxis(-turningModifier * MaxTurningAngle * speedRatio, Vector3.up);
+                turningRot = Quaternion.Slerp(turningRot, targetRot, 0.3f);
             }
             else
             {
@@ -169,7 +170,8 @@ public class CircleControls : MonoBehaviour
                 var turningModifier = TurningCurve.Evaluate(turningRightTime / MaxTurningDuration);
                 radius = Mathf.Clamp(radius + turningSpeed * turningModifier * speedRatio * Time.deltaTime,
                     RadiusBounds[0], RadiusBounds[1]);
-                turningRot = Quaternion.AngleAxis(turningModifier * MaxTurningAngle * speedRatio, Vector3.up);
+                targetRot = Quaternion.AngleAxis(turningModifier * MaxTurningAngle * speedRatio, Vector3.up);
+                turningRot = Quaternion.Slerp(turningRot, targetRot, 0.3f);
             }
             else
             {

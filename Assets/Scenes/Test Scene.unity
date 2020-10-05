@@ -67102,6 +67102,16 @@ PrefabInstance:
       propertyPath: source
       value: 
       objectReference: {fileID: 810283050}
+    - target: {fileID: -8676759040646921074, guid: 493c27704a4d73447a268185f2770673,
+        type: 3}
+      propertyPath: MaxTurningDuration
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8676759040646921074, guid: 493c27704a4d73447a268185f2770673,
+        type: 3}
+      propertyPath: MaxTurningAngle
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 1737834557, guid: 493c27704a4d73447a268185f2770673, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.22894502
