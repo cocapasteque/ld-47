@@ -51,6 +51,7 @@ public class CarSpawner : MonoBehaviour
 
     private void Start()
     {
+        FunMode = PlayerPrefs.HasKey("FunMode") ? Convert.ToBoolean(PlayerPrefs.GetInt("FunMode")) : false;
         if (level != null) level.text = $"Level 1";
         CalculateLaneProbabilities();
         SpawnCars();
