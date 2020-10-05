@@ -820,6 +820,7 @@
           </e>
           <e p="readme.txt" t="Include" />
         </e>
+        <e p="gamemusic.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
