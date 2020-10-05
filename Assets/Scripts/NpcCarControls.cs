@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Cinemachine;
 
 public class NpcCarControls : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class NpcCarControls : MonoBehaviour
     [HideInInspector]
     public float Angle;
 
+    public AudioClip exploClip;
+    public GameObject explosionPrefab;
+
     private int lane;
     private float speed;
     private float radius;
@@ -17,10 +21,15 @@ public class NpcCarControls : MonoBehaviour
     public AudioClip[] honks;
     public AudioSource source;
 
+    private Rigidbody rb;
+    private CinemachineVirtualCamera vcam;
+
     void Start()
     {
         source = GetComponent<AudioSource>();
         source.pitch = Random.Range(1, 2);
+        rb = GetComponent<Rigidbody>();
+        vcam = FindObjectOfType<CinemachineVirtualCamera>();
     }
     
     // Update is called once per frame
@@ -72,6 +81,53 @@ public class NpcCarControls : MonoBehaviour
             yield return new WaitForSeconds(waitTime);
             bool left = System.Convert.ToBoolean(Random.Range(0, 100) % 2);
             ChangeLane(left);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Npc"))
+        {
+            Rigidbody otherRb = collision.rigidbody;
+
+            source.PlayOneShot(exploClip, 1);
+            var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(explosion, 5);
+            GetComponent<NpcCarControls>().enabled = false;
+            GetComponent<CarMovement>().enabled = false;
+            rb.isKinematic = false;
+            rb.AddExplosionForce(200, rb.transform.position - Vector3.up, 2, 2);
+            collision.gameObject.GetComponent<NpcCarControls>().enabled = false;
+            collision.gameObject.GetComponent<CarMovement>().enabled = false;
+            otherRb.isKinematic = false;
+            otherRb.AddExplosionForce(200, rb.transform.position - Vector3.up, 2, 2);
+            CameraShake(0.2f);
+        }        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            source.PlayOneShot(exploClip, 1);
+            var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(explosion, 5);
+            GetComponent<NpcCarControls>().enabled = false;
+            GetComponent<CarMovement>().enabled = false;
+            rb.isKinematic = false;
+            rb.AddExplosionForce(200, rb.transform.position - Vector3.up, 2, 2);
+        }
+    }
+
+    public void CameraShake(float duration)
+    {
+        StartCoroutine(Work());
+        IEnumerator Work()
+        {
+            var noise = vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+            noise.m_AmplitudeGain = 3;
+            yield return new WaitForSeconds(duration);
+            noise.m_AmplitudeGain = 0;
         }
     }
 }
