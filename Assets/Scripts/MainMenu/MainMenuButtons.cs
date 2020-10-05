@@ -113,7 +113,11 @@ namespace MainMenu
 
         public void Exit()
         {
-            Debug.Log("Exit");
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
         }
 
         IEnumerator Fade(bool fadeIn = false)
