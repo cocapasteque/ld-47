@@ -100,6 +100,8 @@ public class CircleControls : MonoBehaviour
         transform.position = new Vector3(radius * Mathf.Sin(angle), 0f, radius * Mathf.Cos(angle));
         transform.rotation = Quaternion.LookRotation(Vector3.Cross(transform.position, Vector3.up));
         turningRot = Quaternion.identity;
+        var noise = vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        noise.m_AmplitudeGain = 0;
     }
 
     void Update()
@@ -237,15 +239,7 @@ public class CircleControls : MonoBehaviour
             _totalLoops++;
         }
         else
-        {
-            source.PlayOneShot(exploClip, 1);
-            var explosion = Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
-            Destroy(explosion, 5);
-            other.GetComponent<NpcCarControls>().enabled = false;
-            other.GetComponent<CarMovement>().enabled = false;
-            var rb = other.GetComponent<Rigidbody>();
-            rb.isKinematic = false;
-            rb.AddExplosionForce(500, rb.transform.position - Vector3.up, 2, 2);
+        {           
             if (_currentCooldown <= HitCooldown) return;
             _currentCooldown = 0;
             playerStates[_currentPlayerState].SetActive(false);
@@ -258,8 +252,7 @@ public class CircleControls : MonoBehaviour
             {
                 playerStates[_currentPlayerState].SetActive(true);
                 StartCoroutine(BlinkRoutine());
-            }
-            CameraShake(0.2f);
+            }          
             Debug.Log("HIT");
         }
     }
@@ -320,18 +313,6 @@ public class CircleControls : MonoBehaviour
         }
     }
 
-    public void CameraShake(float duration)
-    {
-        StartCoroutine(Work());
-        IEnumerator Work()
-        {
-            var noise = vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-            noise.m_AmplitudeGain = 5;
-            yield return new WaitForSeconds(duration);
-            noise.m_AmplitudeGain = 0;
-        }
-    }
-
     private void Exit()
     {
         GetComponent<Collider>().enabled = false;
@@ -374,6 +355,17 @@ public class CircleControls : MonoBehaviour
         public int GetHashCode(Collider obj)
         {
             return obj.GetHashCode();
+        }
+    }
+    public void CameraShake(float duration)
+    {
+        StartCoroutine(Work());
+        IEnumerator Work()
+        {
+            var noise = vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+            noise.m_AmplitudeGain = 5;
+            yield return new WaitForSeconds(duration);
+            noise.m_AmplitudeGain = 0;
         }
     }
 }
