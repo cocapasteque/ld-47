@@ -3885,6 +3885,7 @@ MonoBehaviour:
   - {fileID: 1638210729}
   - {fileID: 927661106}
   - {fileID: 1336361268}
+  FunMode: 1
   level: {fileID: 686104206}
 --- !u!4 &120687470
 Transform:
@@ -67068,6 +67069,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8224070043184735562, guid: ecc91c6c39573814e96fa00d1cb8bd40,
         type: 2}
+    - target: {fileID: 7317018043582777432, guid: 493c27704a4d73447a268185f2770673,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ac00ad74548d0d748bec1f2124878660, type: 3}
     - target: {fileID: 8996265164613255582, guid: 493c27704a4d73447a268185f2770673,
         type: 3}
       propertyPath: m_Name
