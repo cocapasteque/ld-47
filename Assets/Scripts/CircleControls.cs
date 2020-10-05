@@ -106,6 +106,7 @@ public class CircleControls : MonoBehaviour
         turningRot = Quaternion.identity;
         var noise = vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         noise.m_AmplitudeGain = 0;
+        source.Play();
     }
 
     void Update()
