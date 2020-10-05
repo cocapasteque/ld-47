@@ -21,7 +21,7 @@ public class GameOverScreen : MonoBehaviour
 
     public void Restart()
     {
-        // TODO: Stefan
+        SceneManager.LoadScene("Test Scene");
     }
 
     public void BackToMenu()

@@ -14,6 +14,7 @@ public class CircleControls : MonoBehaviour
     public Vector2 RadiusBounds;
 
     public AnimationCurve AccelerationCurve;
+    public AnimationCurve BreakingCurve;
     public AnimationCurve TurningCurve;
 
     public float ExitTurningDuration;
@@ -109,20 +110,22 @@ public class CircleControls : MonoBehaviour
 
         angle -= speed * Time.deltaTime / radius;
         baseRot = Quaternion.LookRotation(Vector3.Cross(transform.position, Vector3.up));
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetAxis("Accelerating") > 0)
         {
             var speedGain = AccelerationCurve.Evaluate(Mathf.InverseLerp(0, maxSpeed, speed)) *
                             Acceleration * Time.deltaTime;
             speed = Mathf.Clamp(speed + speedGain, 0, maxSpeed);
         }
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetAxis("Breaking") > 0)
         {
-            speed = Mathf.Clamp(speed - Acceleration * Time.deltaTime, 0, maxSpeed);
+            var speedLose = BreakingCurve.Evaluate(Mathf.InverseLerp(0, maxSpeed, speed)) *
+                            Acceleration * Time.deltaTime;
+            speed = Mathf.Clamp(speed - speedLose, 0, maxSpeed);
         }
 
         speedRatio = speed / maxSpeed;
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetAxis("Horizontal") < 0)
         {
             if (radius > RadiusBounds[0])
             {
@@ -143,7 +146,7 @@ public class CircleControls : MonoBehaviour
             turningLeftTime = 0f;
         }
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetAxis("Horizontal") > 0)
         {
             if (radius < RadiusBounds[1])
             {
@@ -164,7 +167,7 @@ public class CircleControls : MonoBehaviour
             turningRightTime = 0f;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButton("Honk"))
         {
             if (currentHonkCooldown > HonkCooldown)
                 Honk();
