@@ -19,13 +19,14 @@ namespace MainMenu
         public Transform buttonTarget;
         private GameObject[] _buttons;
         private bool _ready;
+        private bool _nameReady = false;
         private string[] _buttonTexts = new[] {"Start", "Exit"};
         public Button.ButtonClickedEvent[] buttonActions;
         public RawImage fadeImage;
 
         public UIView keyboardView;
         public TMP_InputField input;
-        
+
         private void Awake()
         {
             _spawner = GetComponent<CarSpawner>();
@@ -34,19 +35,29 @@ namespace MainMenu
                 StartCoroutine(OnCarSpawned());
                 if (string.IsNullOrEmpty(PlayerPrefs.GetString("Playername")))
                 {
-                    _ready = false;
+                    _nameReady = false;
                     keyboardView.Show();
+                }
+                else
+                {
+                    _nameReady = true;
                 }
             };
         }
-        
+
+        public void ResetData()
+        {
+            PlayerPrefs.SetString("Playername", string.Empty);
+            SceneManager.LoadScene("Main Menu");
+        }
+
         public void SaveName()
         {
             if (!string.IsNullOrWhiteSpace(input.text))
             {
                 PlayerPrefs.SetString("Playername", input.text);
                 keyboardView.Hide();
-                _ready = true;
+                _nameReady = true;
             }
         }
 
@@ -86,11 +97,15 @@ namespace MainMenu
 
         private void Update()
         {
-            if (!_ready) return;
-            foreach (var button in _buttons)
+            if (_buttons != null)
             {
-                button.transform.LookAt(buttonTarget);
+                foreach (var button in _buttons)
+                {
+                    button.transform.LookAt(buttonTarget);
+                }
             }
+
+            if (!_ready || !_nameReady) return;
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -114,6 +129,7 @@ namespace MainMenu
             {
                 return GetCar();
             }
+
             return car;
         }
 
