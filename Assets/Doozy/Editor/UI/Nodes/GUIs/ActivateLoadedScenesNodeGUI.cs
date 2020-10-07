@@ -1,19 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using Doozy.Editor.Nody.NodeGUI;
-using Doozy.Engine.UI.Nodes;
-using UnityEngine;
-
-namespace Doozy.Editor.UI.Nodes
-{
-    // ReSharper disable once UnusedMember.Global
-    [CustomNodeGUI(typeof(ActivateLoadedScenesNode))]
-    public class ActivateLoadedScenesNodeGUI : BaseNodeGUI
-    {
-        private static GUIStyle s_iconStyle;
-        private static GUIStyle IconStyle { get { return s_iconStyle ?? (s_iconStyle = Styles.GetStyle(Styles.StyleName.NodeIconActivateLoadedScenesNode)); } }
-        protected override GUIStyle GetIconStyle() { return IconStyle; }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:20c1b288e426928eb9c1ef3b7d96d878c485ae85bde35615fa0c20de8f41a0dc
+size 827

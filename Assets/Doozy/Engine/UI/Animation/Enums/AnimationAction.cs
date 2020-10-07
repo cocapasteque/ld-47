@@ -1,30 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Engine.UI.Animation
-{
-    /// <summary> Describes the types of animation actions that can be performed on a target object by the UIAnimator </summary>
-    public enum AnimationAction
-    {
-        /// <summary>
-        /// Move Animation
-        /// </summary>
-        Move,
-        
-        /// <summary>
-        /// Rotate Animation
-        /// </summary>
-        Rotate,
-        
-        /// <summary>
-        /// Scale Animation
-        /// </summary>
-        Scale,
-        
-        /// <summary>
-        /// Fade Animation
-        /// </summary>
-        Fade
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4f46922a9441cd61e49c69e83df9eb34aa265b632102b5fbf643551f32c3e4ee
+size 845

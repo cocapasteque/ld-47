@@ -1,14 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using System;
-using UnityEngine.Events;
-
-namespace Doozy.Engine.UI
-{
-    /// <inheritdoc />
-    /// <summary> UnityEvent used to send UIButton references when an UIButtonBehavior is triggered </summary>
-    [Serializable]
-    public class UIButtonEvent : UnityEvent<UIButton> { }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b0e1850041044e326980a60a8af2114209bbb2f63d75e15a213f936fa1077f69
+size 538

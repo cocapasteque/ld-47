@@ -1,21 +1,3 @@
-fileFormatVersion: 2
-guid: 75114b4d34d529d48bc42ba5c9ca6e92
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: Emilys Candy
-  fontNames:
-  - Emilys Candy
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:92a15b0d7eeeca6643e1a552f32014aa0168820cffdbe136252b2737d2a360d9
+size 473

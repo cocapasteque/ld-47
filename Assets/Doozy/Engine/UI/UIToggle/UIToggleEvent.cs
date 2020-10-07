@@ -1,14 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using System;
-using UnityEngine.Events;
-
-namespace Doozy.Engine.UI
-{
-    /// <inheritdoc />
-    /// <summary> UnityEvent used to send UIToggle references when an UIToggleBehavior is triggered </summary>
-    [Serializable]
-    public class UIToggleEvent : UnityEvent<UIToggle> { }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ec3f07f689b132f064eda6e59defa600639cd7edaef9a5f920013b10e56a5b2e
+size 538

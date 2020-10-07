@@ -1,21 +1,3 @@
-fileFormatVersion: 2
-guid: 061f81da76dad6f4d95f67904682db72
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: Monoton
-  fontNames:
-  - Monoton
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:8ef3a0e11e9a1662a03febb0359c736e6122b9382d7167c1259754a1ad400b1a
+size 463

@@ -1,16 +1,3 @@
-fileFormatVersion: 2
-guid: 8a7cf5ac7b4145441a3dca86f869b09e
-labels:
-- dead
-- plant
-- pack
-- low-poly
-- set
-- lowpoly
-- tree
-timeCreated: 1457642220
-licenseType: Store
-NativeFormatImporter:
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:4eb12c5b566ad355a7f650101096cdfcf6339ec9487b7322b1932ab744ce3cb7
+size 245

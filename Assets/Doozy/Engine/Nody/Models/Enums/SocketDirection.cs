@@ -1,22 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Engine.Nody.Models
-{
-    /// <summary>
-    ///     Describes a Socket's flow (Input/Output)
-    /// </summary>
-    public enum SocketDirection
-    {
-        /// <summary>
-        ///     An input Socket can only connect to an output Socket
-        /// </summary>
-        Input,
-
-        /// <summary>
-        ///     An output Socket can only connect to an input Socket
-        /// </summary>
-        Output
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ace1e2ae4e16b0db68a11c29073cbde0f195266f48891ae4fd983156709487ca
+size 688

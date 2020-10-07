@@ -1,13 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Editor
-{
-    /// <summary> Types of dividers </summary>
-    public enum DividerType
-    {
-        One,
-        Two
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1fc80b95c4f37dcc51dd846db9ecb7d9d2a3e24442f680e1f04600a4746cadbd
+size 395

@@ -1,13 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Engine
-{
-    /// <summary> Available languages for the entire Doozy system </summary>
-    public enum Language
-    {
-        Unknown,
-        English
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5a960a2306b05c4a80e19c9e87c81565ad0c20dd49444949e94a7b67ba470f43
+size 430

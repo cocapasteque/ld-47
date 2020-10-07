@@ -1,25 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using UnityEditor;
-using UnityEngine;
-
-namespace Doozy.Editor.Nody.Windows
-{
-    public partial class NodyWindow
-    {
-        /// <summary> Updates the cursor to reflect current context state </summary>
-        private void UpdateCursorIcon()
-        {
-            //if not panning or Space key down -> return
-            if (m_mode != GraphMode.Pan && !m_spaceKeyDown) return;
-
-            //calculate the custom cursor rect
-            var cursorRect = new Rect(CurrentMousePosition.x, CurrentMousePosition.y, 32f, 32f);
-
-            //show a custom cursor for PANNING
-            EditorGUIUtility.AddCursorRect(cursorRect, MouseCursor.Pan);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2a1f02b8b1c460461fa8063a6f59fe728d012bf8c4626ce0122f2b1ec094d5be
+size 919

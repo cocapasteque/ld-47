@@ -1,15 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Editor
-{
-    /// <summary> Types of directions </summary>
-    public enum Direction
-    {
-        LeftToRight,
-        TopToBottom,
-        RightToLeft,
-        BottomToTop
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:644441a7164ff026cb923af85d44d3770207ea60a916ea51ea2422ee4cb65a16
+size 453

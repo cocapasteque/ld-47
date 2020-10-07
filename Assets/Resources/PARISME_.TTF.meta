@@ -1,22 +1,3 @@
-fileFormatVersion: 2
-guid: 500b0f428c0124541a0eba8e674366b2
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: ParisMetro
-  fontNames:
-  - ParisMetro
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  shouldRoundAdvanceValue: 1
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf6e5a87bb12388b9268ea41a3c3084c2879bc852d31174ee74405c2dd54d5e8
+size 498

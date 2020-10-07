@@ -1,19 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using System;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
-
-namespace Doozy.Engine.SceneManagement
-{
-    /// <inheritdoc />
-    /// <summary>
-    /// UnityEvent used by the SceneDirector to notify when a Scene was loaded.
-    /// <para/> Includes references to the loaded Scene and the used LoadSceneMode.
-    /// </summary>
-    [Serializable]
-    public class SceneLoadedEvent : UnityEvent<Scene, LoadSceneMode> { }
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf02d01fc835973468d610bc867b320574ed97a13272d2f513faa670d8883c65
+size 692

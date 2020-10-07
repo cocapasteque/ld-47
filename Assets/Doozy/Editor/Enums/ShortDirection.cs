@@ -1,15 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Editor
-{
-    /// <summary> Simple direction definition </summary>
-    public enum ShortDirection
-    {
-        ToRight,
-        ToBottom,
-        ToLeft,
-        ToTop
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b2671f79b10686aa783cef43872214d3a11c98bd324e161a6f95729de22d77a6
+size 448

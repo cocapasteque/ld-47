@@ -1,21 +1,3 @@
-fileFormatVersion: 2
-guid: 82cf6d32e08414b42b7ca95fa7e32b2b
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: Baloo Chettan
-  fontNames:
-  - Baloo Chettan
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:a6d12770701ec5f43ff13b4b615649b011f37efeed31fb12d541dc3bfcfbc5d7
+size 475

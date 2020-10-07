@@ -1,15 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using System;
-using UnityEngine;
-using UnityEngine.Events;
-
-namespace Doozy.Engine.Events
-{
-    /// <inheritdoc />
-    /// <summary> UnityEvent used to send Texture references </summary>
-    [Serializable]
-    public class TextureEvent : UnityEvent<Texture> { }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c7cc46cc8fbac6b2e0857d417ecf55f0e9aa29d3cbdb850993fcd82c38bd0306
+size 520

@@ -1,22 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Engine.UI
-{
-    /// <summary> Describes the UIEffect automated sorting behaviors for its target ParticleSystem </summary>
-    public enum DynamicSorting
-    {
-        /// <summary> Automated sorting disabled </summary>
-        Disabled,
-
-        /// <summary> Automatically updates source's SortingLayer and order in layer to appear in front of a specified target </summary>
-        InFront,
-
-        /// <summary> Automatically updates source's SortingLayer and order in layer to appear behind a specified target </summary>
-        Behind,
-
-        /// <summary> Uses custom SortingLayer and sorting order values </summary>
-        Custom
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a85c8681c808f15804216536cf6d5eb92a108ec04b223b8122508a97e4c1699b
+size 920

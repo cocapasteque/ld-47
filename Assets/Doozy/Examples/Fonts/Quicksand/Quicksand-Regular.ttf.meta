@@ -1,21 +1,3 @@
-fileFormatVersion: 2
-guid: 1a184f0334d092e409e23b284a4e40f3
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: Quicksand
-  fontNames:
-  - Quicksand
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:eed4b43595fd48e0487a2e79db73942625a45349c95a71c98de7730bce47a1b2
+size 467

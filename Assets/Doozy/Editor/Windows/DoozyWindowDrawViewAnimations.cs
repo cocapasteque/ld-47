@@ -1,16 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using UnityEngine;
-
-namespace Doozy.Editor.Windows
-{
-    public partial class DoozyWindow
-    {
-        private void DrawViewAnimations()
-        {
-            if (CurrentView != View.Animations) return;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:48d45877f0c6ecfa1ced58ba92277eca001ff6e0b59efe4a8999dde7507364e8
+size 478

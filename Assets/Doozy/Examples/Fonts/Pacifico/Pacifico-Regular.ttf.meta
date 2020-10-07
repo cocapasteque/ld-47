@@ -1,21 +1,3 @@
-fileFormatVersion: 2
-guid: 2188f71ca6b187a47be40f0769639dd1
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: Pacifico
-  fontNames:
-  - Pacifico
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:56fec4b515ac29954cb668f6eb78207d9403185a43cbc9453849f4ca3212eae0
+size 465

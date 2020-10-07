@@ -1,15 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using System;
-using UnityEngine;
-using UnityEngine.Events;
-
-namespace Doozy.Engine.Events
-{
-    /// <inheritdoc />
-    /// <summary> UnityEvent used to send GameObject references </summary>
-    [Serializable]
-    public class GameObjectEvent : UnityEvent<GameObject> { }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c965ad3c0652d4395f204c9da56912619e4e638213c8f74902145543242c171
+size 529

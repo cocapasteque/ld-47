@@ -1,16 +1,3 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
-
-public class MenuButton : MonoBehaviour
-{
-    public Button.ButtonClickedEvent OnClick;
-
-    public void Trigger()
-    {
-        OnClick?.Invoke();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2f6bce11de14aac6271d6cc361d0e3229615b61bc5553431cb25fd72fe4fd66e
+size 301

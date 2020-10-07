@@ -1,22 +1,3 @@
-fileFormatVersion: 2
-guid: 61edf353f97b15c4687a55c9a88f05f8
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: Codystar
-  fontNames:
-  - Codystar
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: 33eaf69bbd9a1454d910d5252cc5d995, type: 3}
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:35b0ae48e5c75afda540f737694519c3c5476f86ffa560f32f8a3d35f35f2b9e
+size 534

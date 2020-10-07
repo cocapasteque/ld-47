@@ -1,16 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Editor
-{
-    public static partial class DGUI
-    {
-        public static class Copyright
-        {
-            public const string LINE_ONE = "// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.";
-            public const string LINE_TWO = "// This code can only be used under the standard Unity Asset Store End User License Agreement";
-            public const string LINE_THREE = "// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2cbefc45bfffbb757a93ff253c0ea821800508a28c5e3bfa5d39da2b98436beb
+size 786

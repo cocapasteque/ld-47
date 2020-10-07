@@ -1,16 +1,3 @@
-﻿// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Engine.UI
-{
-    /// <summary> Describes the states an UIToggle can have. An UIToggle can only be in one state at any given time. </summary>
-    public enum UIToggleState
-    {
-        /// <summary> UIToggle is On (TRUE) </summary>
-        On,
-
-        /// <summary> UIToggle is Off (FALSE) </summary>
-        Off
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0922cf8d7daf90e18b31e9bf3a5bb10a4cb0f689e9c739692fc1044cf9719dc2
+size 596

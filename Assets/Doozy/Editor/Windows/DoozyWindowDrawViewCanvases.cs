@@ -1,26 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using Doozy.Engine.Utils;
-using Doozy.Engine.UI.Base;
-using Doozy.Engine.UI.Settings;
-using UnityEngine;
-
-namespace Doozy.Editor.Windows
-{
-    public partial class DoozyWindow
-    {
-        private static NamesDatabase UICanvasDatabase { get { return UICanvasSettings.Database; } }
-
-        private void InitViewCanvases() { }
-
-        private void DrawViewCanvases()
-        {
-            if (CurrentView != View.Canvases) return;
-            DrawItemsDatabase(UICanvasDatabase, true, View.Canvases);
-            
-            DrawDynamicViewVerticalSpace(2);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8505f8fc8a37c8ea4bd8894511dded2339dbe7d030d4be5aa9b02ea56ae689e
+size 834

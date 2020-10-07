@@ -1,22 +1,3 @@
-fileFormatVersion: 2
-guid: 43b701384840bcf44bfe745decdccd58
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: Sansation
-  fontNames:
-  - Sansation
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: 236f54b53f8bd3545984d90a2ee14c00, type: 3}
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:20e639d43552fd7bc7c3cfad9db26404153ceb2a3658387168d72b69cd424bd7
+size 536

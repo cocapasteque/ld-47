@@ -1,16 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Engine.UI
-{
-    /// <summary> Determines if, when invoked, an UIEffect will Play or Stop its target ParticleSystem </summary>
-    public enum UIEffectBehavior
-    {
-        /// <summary> Plays the ParticleSystem </summary>
-        Play,
-
-        /// <summary> Stops the ParticleSystem </summary>
-        Stop
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:db8bcb2db51fb9142ecd24c480568aba960b102fb2eb1e66f80d960bdbf28e34
+size 589

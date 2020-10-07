@@ -1,29 +1,3 @@
-﻿using UnityEngine;
-using System.Collections;
-
-namespace Proyecto26
-{
-    public static class StaticCoroutine
-    {
-        private class CoroutineHolder : MonoBehaviour { }
-
-        private static CoroutineHolder _runner;
-        private static CoroutineHolder Runner
-        {
-            get
-            {
-                if (_runner == null)
-                {
-                    _runner = new GameObject("Static Coroutine RestClient").AddComponent<CoroutineHolder>();
-                    Object.DontDestroyOnLoad(_runner);
-                }
-                return _runner;
-            }
-        }
-
-        public static Coroutine StartCoroutine(IEnumerator coroutine)
-        {
-            return Runner.StartCoroutine(coroutine);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:52aaf8350edbd78961b7b0b68c29115599d6dd74befdc5f7906446551f579472
+size 756

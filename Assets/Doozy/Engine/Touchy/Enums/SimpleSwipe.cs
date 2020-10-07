@@ -1,35 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Engine.Touchy
-{
-    /// <summary> Describes a swipe in 4 directions </summary>
-    public enum SimpleSwipe
-    {
-        /// <summary>
-        ///     Unknown swipe direction (disabled state)
-        /// </summary>
-        None = 0,
-
-        /// <summary>
-        ///     Swipe Left
-        /// </summary>
-        Left = 1,
-
-        /// <summary>
-        ///     Swipe Right
-        /// </summary>
-        Right = 2,
-
-        /// <summary>
-        ///     Swipe Up
-        /// </summary>
-        Up = 3,
-
-        /// <summary>
-        ///     Swipe Down
-        /// </summary>
-        Down = 4
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1cf5805e1480c45d96982435db00ac9eeead5c12658fda1edddaff9e93176fad
+size 874

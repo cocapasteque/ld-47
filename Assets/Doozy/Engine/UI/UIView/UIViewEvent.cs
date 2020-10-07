@@ -1,14 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using System;
-using UnityEngine.Events;
-
-namespace Doozy.Engine.UI
-{
-    /// <inheritdoc />
-    /// <summary> UnityEvent used to send UIView references when an UIViewBehavior is triggered </summary>
-    [Serializable]
-    public class UIViewEvent : UnityEvent<UIView> { }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed26848805eeb6d2f17c49d3c96c53dd3256e76b963bfb55e50cb75cc928e444
+size 530

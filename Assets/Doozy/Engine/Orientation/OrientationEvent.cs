@@ -1,14 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using System;
-using UnityEngine.Events;
-
-namespace Doozy.Engine.Orientation
-{
-    /// <inheritdoc />
-    /// <summary> UnityEvent used to send DetectedOrientation </summary>
-    [Serializable]
-    public class OrientationEvent : UnityEvent<DetectedOrientation> { }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c8635b27bf37395717a7c0f79c271f929e1769c0354ea165267c22337b7dfea
+size 523

@@ -1,21 +1,3 @@
-fileFormatVersion: 2
-guid: 0511794687d6e634fa9a400c4df6b01a
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: Unica One
-  fontNames:
-  - Unica One
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:0662478fece5afaf5f4a351c117caf9663723b7721d34ec3aea135ca471d197e
+size 467

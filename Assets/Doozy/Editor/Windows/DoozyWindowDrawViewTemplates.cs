@@ -1,18 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using UnityEngine;
-
-namespace Doozy.Editor.Windows
-{
-    public partial class DoozyWindow
-    {
-        private void DrawViewTemplates()
-        {
-            if (CurrentView != View.Templates) return;
-            
-            DrawDynamicViewVerticalSpace(2);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2135013d858d55f0bed7811ed8613bd61de81ffd6cc06c93e30591f885635c28
+size 534

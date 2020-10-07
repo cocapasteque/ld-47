@@ -1,35 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using System;
-
-namespace Doozy.Engine.Progress
-{
-    /// <summary>
-    /// Describes the reset options for the current Value of a Progressor
-    /// </summary>
-    [Serializable]
-    public enum ResetValue
-    {
-        /// <summary>
-        /// Value will not get reset
-        /// </summary>
-        Disabled,
-
-        /// <summary>
-        /// Value will get reset to the minimum value
-        /// </summary>
-        ToMinValue,
-
-        /// <summary>
-        /// Value will get reset to the maximum value
-        /// </summary>
-        ToMaxValue,
-
-        /// <summary>
-        /// Value will get reset to a custom value
-        /// </summary>
-        ToCustomValue
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e9e63bc4790f1b37a23b55fdf909f7116338890477c76dd8f210df8d84d51a6f
+size 935

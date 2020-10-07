@@ -1,23 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using System;
-
-// ReSharper disable UnusedAutoPropertyAccessor.Global
-// ReSharper disable MemberCanBePrivate.Global
-
-namespace Doozy.Engine.Attributes
-{
-    public class MinMaxRangeAttribute : Attribute
-    {
-        public MinMaxRangeAttribute(float min, float max)
-        {
-            Min = min;
-            Max = max;
-        }
-        
-        public float Min { get; private set; }
-        public float Max { get; private set; }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a4f0cffb3b38fca6e3d9d8b3fc209ccfcc18a450a23b03086c1b08535bd10dbf
+size 701

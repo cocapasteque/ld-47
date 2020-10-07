@@ -1,25 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Engine.UI
-{
-    /// <summary> Describes what types of UIDrawerBehaviors are available for an UIDrawer </summary>
-    public enum UIDrawerBehaviorType
-    {
-        /// <summary>
-        ///     The UIDrawer becomes visible on screen
-        /// </summary>
-        Open,
-
-        /// <summary>
-        ///     The UIDrawer goes off screen
-        /// </summary>
-        Close,
-
-        /// <summary>
-        ///     The UIDrawer is dragged
-        /// </summary>
-        Drag
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:66d892288edc7115f68bbfc5a1e9c35512756b23227dff83e91a47ccd02ed8a6
+size 755

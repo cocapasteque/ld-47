@@ -1,23 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-[CreateAssetMenu(fileName = "LevelStats", menuName = "ScriptableObjects/LevelStats", order = 1)]
-public class LevelStats : ScriptableObject
-{
-    [Header("Cars")]
-    public int FirstLevelCars;
-    public int MaxCars;
-    public int MaxCarLevel;
-    public AnimationCurve CarIncrease;
-    [Header("Lane Change")]
-    public Vector2 FirstLevelLaneChangeCooldown;
-    public Vector2 MinLaneChangeCooldown;
-    public int MinLaneChangeCooldownLevel;
-    public AnimationCurve LaneChangeCooldownDecrease;
-    [Header("Speed")]
-    public float FirstLevelSpeed;
-    public float FirstLevelPlayerMaxSpeed;
-    public float FirstLevelPlayerAccaleration;
-    public float SpeedIncreaseFactor;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:81b256f1b1b0e4cebf33a1a5d798a76df726cf55e5da4e14737425122bb4c2e7
+size 770

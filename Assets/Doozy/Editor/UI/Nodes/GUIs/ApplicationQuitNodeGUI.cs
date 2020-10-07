@@ -1,19 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using Doozy.Editor.Nody.NodeGUI;
-using Doozy.Engine.UI.Nodes;
-using UnityEngine;
-
-namespace Doozy.Editor.UI.Nodes
-{
-    // ReSharper disable once UnusedMember.Global
-    [CustomNodeGUI(typeof(ApplicationQuitNode))]
-    public class ApplicationQuitNodeGUI : BaseNodeGUI
-    {
-        private static GUIStyle s_iconStyle;
-        private static GUIStyle IconStyle { get { return s_iconStyle ?? (s_iconStyle = Styles.GetStyle(Styles.StyleName.IconApplicationQuit)); } }
-        protected override GUIStyle GetIconStyle() { return IconStyle; }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:36f2dca8e20e7df2de5680f5c034e8b2ef337a41765e6dc8012f07b2c4aee3a3
+size 804

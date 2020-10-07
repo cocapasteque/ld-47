@@ -1,20 +1,3 @@
-﻿using UnityEngine;
-
-namespace Utils
-{
-    public class AudioManager : Singleton<AudioManager>
-    {
-        private AudioSource _source;
-
-        void Awake()
-        {
-            _source = gameObject.AddComponent<AudioSource>();
-            _source.loop = false;
-        }
-
-        public void PlaySound(AudioClip clip)
-        {
-            _source.PlayOneShot(clip);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:04e600aa7e121f59884166dea2a0589065a5ecc3137a36d757c036f298d369ef
+size 391

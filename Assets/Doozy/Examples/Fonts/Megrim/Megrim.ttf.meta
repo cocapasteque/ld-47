@@ -1,21 +1,3 @@
-fileFormatVersion: 2
-guid: 5e663bd217c0d9145924fa72aa8bb710
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: Megrim
-  fontNames:
-  - Megrim
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:b65fccbdf9c10e031ddacc3f803f18eca7a2de9806a2f09ef491593ec780d38f
+size 461

@@ -1,14 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using System;
-using UnityEngine.Events;
-
-namespace Doozy.Engine.Progress
-{
-    /// <inheritdoc />
-    /// <summary> UnityEvent used by any progress related components </summary>
-    [Serializable]
-    public class ProgressEvent : UnityEvent<float> { }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f4d6ade336e06df08f75aa40a35ff348f11a54c06708e1b7b691172c4db765b9
+size 510

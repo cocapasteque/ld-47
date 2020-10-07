@@ -1,13 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Editor
-{
-    /// <summary> Types of corners </summary>
-    public enum CornerType
-    {
-        Round,
-        Square
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e262e295618af146e3d1c1dd0b919a0e2ddd7ded4bad2e01e19f4dd841525a87
+size 398

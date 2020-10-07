@@ -1,24 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using DG.Tweening;
-using UnityEngine;
-
-public class MontgolfierMovement : MonoBehaviour
-{
-    public float rotationSpeed;
-    public float amplitude;
-    public float movementSpeed;
-
-    private Vector3 basePosition;
-
-    void Start()
-    {
-        basePosition = transform.position;
-    }
-    
-    void Update()
-    {
-        transform.Rotate(Vector3.forward, rotationSpeed);
-        transform.position = new Vector3(basePosition.x, basePosition.y + Mathf.Sin(Time.time) * amplitude, basePosition.z);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0217f8baafb8c9e94d31738b2cc120d7a05c392ef295b9f834419dfef9823243
+size 573

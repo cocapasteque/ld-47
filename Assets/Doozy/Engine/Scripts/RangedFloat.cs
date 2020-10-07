@@ -1,25 +1,3 @@
-﻿// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using System;
-
-namespace Doozy.Engine
-{
-    /// <summary>
-    ///     Struct that contains a minimum and a maximum values that define a float interval
-    /// </summary>
-    [Serializable]
-    public struct RangedFloat
-    {
-        /// <summary>
-        ///     Minimum value for the float interval
-        /// </summary>
-        public float MinValue;
-
-        /// <summary>
-        ///     Maximum value for the float interval
-        /// </summary>
-        public float MaxValue;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1c85884df826fd9fbeeedc56cc3622979bbb3577ac79b413ee93b5978073444
+size 751

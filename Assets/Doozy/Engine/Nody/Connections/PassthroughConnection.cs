@@ -1,12 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-using System;
-
-namespace Doozy.Engine.Nody.Connections
-{
-    /// <summary> Universal (empty) data container for any connection between Nody Nodes </summary>
-    [Serializable]
-    public class PassthroughConnection { }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a759c99a2f22db3a543f2add4eb318615d3f179565c2540220987cf1d17a01e4
+size 477

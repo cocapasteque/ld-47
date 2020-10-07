@@ -1,13 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Editor
-{
-    /// <summary> Types of GUI skin </summary>
-    public enum Skin
-    {
-        Dark,
-        Light
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:166339f88088d024248b4c49b44823dcd465ad925fced067e0fd50df93a29829
+size 391

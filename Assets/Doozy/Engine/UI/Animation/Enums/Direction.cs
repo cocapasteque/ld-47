@@ -1,25 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Engine.UI.Animation
-{
-    /// <summary> Describes the directions available for the Move animation </summary>
-    public enum Direction
-    {
-        Left = 0,
-        Right = 1,
-        Top = 2,
-        Bottom = 3,
-        TopLeft = 4,
-        TopCenter = 5,
-        TopRight = 6,
-        MiddleLeft = 7,
-        MiddleCenter = 8,
-        MiddleRight = 9,
-        BottomLeft = 10,
-        BottomCenter = 11,
-        BottomRight = 12,
-        CustomPosition = 13
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea89f9136daa57e6db16d68cbdd766fac2e21890f7269d952dc85adbe0397a02
+size 742

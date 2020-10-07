@@ -1,31 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Doozy.Engine.UI;
-using TMPro;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public class GameOverScreen : MonoBehaviour
-{
-    public UIView view;
-    public UIButton menuButton;
-    public UIButton restartButton;
-
-    public TMP_Text achievement;
-
-    public void GameOver(int level)
-    {
-        achievement.text = $"YOU MADE IT TO LEVEL {level}";
-        view.Show();
-    }
-
-    public void Restart()
-    {
-        SceneManager.LoadScene("Test Scene");
-    }
-
-    public void BackToMenu()
-    {
-        SceneManager.LoadScene("Main Menu");
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:71d1ec7482be912b323b9f6ceed87d90f96dc77a04153cdf4fecda58dd9a588f
+size 629

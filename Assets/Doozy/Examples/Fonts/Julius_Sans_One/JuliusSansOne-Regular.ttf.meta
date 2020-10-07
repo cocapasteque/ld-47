@@ -1,21 +1,3 @@
-fileFormatVersion: 2
-guid: ff5d162d816447440adbfa33a34e6a26
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: Julius Sans One
-  fontNames:
-  - Julius Sans One
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:6521420ed69cd04d876c225809fae5b79658b2a40b24ffe504b689222d8e6842
+size 479

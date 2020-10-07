@@ -1,14 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Editor
-{
-    /// <summary> States a toggle can have </summary>
-    public enum ToggleState
-    {
-        Disabled,
-        Enabled,
-        MultiValues
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:230d21b925c4b13defec0ad6f71798fd43d54885a73458ff72ce38897bdb2589
+size 432

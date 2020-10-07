@@ -1,21 +1,3 @@
-﻿using System;
-
-namespace Models
-{
-	[Serializable]
-	public class Todo
-	{
-		public int id;
-
-		public int userId;
-
-		public string title;
-
-		public bool completed;
-
-		public override string ToString(){
-			return UnityEngine.JsonUtility.ToJson (this, true);
-		}
-	}
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:9679b533c65432d69dd57a2cb2923ef79bf224f8a1975f8bc17c39015a18ae0a
+size 267

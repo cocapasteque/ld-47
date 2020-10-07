@@ -1,15 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Editor
-{
-    /// <summary> Available sizes </summary>
-    public enum Size
-    {
-        S,
-        M,
-        L,
-        XL,
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:93840a98d0f70390a7ca4c2a6c27df9e4305f1fad8679a5e14ee903300be0a65
+size 406

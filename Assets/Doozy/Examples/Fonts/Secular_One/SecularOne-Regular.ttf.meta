@@ -1,21 +1,3 @@
-fileFormatVersion: 2
-guid: 49e6f4aa3f4a8cc42846815efdf9a73e
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: Secular One
-  fontNames:
-  - Secular One
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ba7f5aefb537f79cdec4ab00fa9d193f12e10655bca1e69b1053181323ca2de
+size 471

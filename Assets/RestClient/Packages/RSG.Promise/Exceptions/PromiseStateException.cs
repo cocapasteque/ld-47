@@ -1,22 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace RSG.Exceptions
-{
-    /// <summary>
-    /// Exception thrown when an operation is performed on a promise that is in an invalid
-    /// state for it to handle.
-    /// </summary>
-    public class PromiseStateException : PromiseException
-    {
-        public PromiseStateException() { }
-
-        public PromiseStateException(string message) : base(message) { }
-
-        public PromiseStateException(string message, Exception inner) 
-            : base(message, inner)
-        { }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a74dee5019fecb1b67df744cffc9e84df7c0399185b375fc83ec56b2c9943e2c
+size 582

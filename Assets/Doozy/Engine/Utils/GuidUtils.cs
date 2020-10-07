@@ -1,19 +1,3 @@
-using System;
-
-namespace Doozy.Engine.Utils
-{
-    public static class GuidUtils
-    {
-        /// <summary>
-        /// Creates the SerializedGuid byte array
-        /// <para/> Used OnBeforeSerialize
-        /// </summary>
-        public static byte[] GuidToSerializedGuid(Guid guid) { return guid != Guid.Empty ? guid.ToByteArray() : null; }
-
-        /// <summary>
-        /// Restores the Guid from the SerializedGuid byte array
-        /// <para/> Used OnAfterDeserialize 
-        /// </summary>
-        public static Guid SerializedGuidToGuid(byte[] serializedGuid) { return serializedGuid != null && serializedGuid.Length == 16 ? new Guid(serializedGuid) : Guid.Empty; }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b2989a9dd5f7f849ad1a8ca4f2ae9e9602b9c757c93202cc61a33e9c723a61a
+size 684

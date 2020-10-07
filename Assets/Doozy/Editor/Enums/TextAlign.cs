@@ -1,14 +1,3 @@
-// Copyright (c) 2015 - 2020 Doozy Entertainment. All Rights Reserved.
-// This code can only be used under the standard Unity Asset Store End User License Agreement
-// A Copy of the EULA APPENDIX 1 is available at http://unity3d.com/company/legal/as_terms
-
-namespace Doozy.Editor
-{
-    /// <summary> Alignment options for Doozy GUI text </summary>
-    public enum TextAlign
-    {
-        Left,
-        Center,
-        Right
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1fff387de68b3c92d5b4f612269818c1e36f2cda040301b7722f4a053fbf20f
+size 431
